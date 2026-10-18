@@ -3,6 +3,7 @@
 
 import { DeletedObject, Invitation } from "../types/shared";
 import { ClerkErrors } from "../types/shared-clerk";
+import { InvitationRevoked } from "../types/invitations";
 import { decodeResponseEnums } from "../response-enum-validation";
 import type { ClientConfig, RequestOptions } from "../client";
 import { encodePathSegment, fromWire, queryValue, sdkDecode, sdkRequest } from "../client";
@@ -271,34 +272,8 @@ export async function revokeInvitation(
   config: ClientConfig,
   { invitationId }: RevokeInvitationParams,
   requestOptions?: RequestOptions,
-): Promise<
-  Invitation & {
-    /**
-     *
-     * @example true
-     */
-    revoked?: boolean;
-    /**
-     *
-     * @example "revoked"
-     */
-    status?: "revoked" | (string & {});
-  }
-> {
-  const _resp = await sdkRequest<
-    Invitation & {
-      /**
-       *
-       * @example true
-       */
-      revoked?: boolean;
-      /**
-       *
-       * @example "revoked"
-       */
-      status?: "revoked" | (string & {});
-    }
-  >({
+): Promise<InvitationRevoked> {
+  const _resp = await sdkRequest<InvitationRevoked>({
     method: "POST",
     path: `/invitations/${encodePathSegment(invitationId)}/revoke`,
     operationId: "revokeInvitation",
@@ -311,20 +286,9 @@ export async function revokeInvitation(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, { allOf: [{ ref: "Invitation" }] }),
-        "RevokeInvitation response",
-      ) as Invitation & {
-        /**
-         *
-         * @example true
-         */
-        revoked?: boolean;
-        /**
-         *
-         * @example "revoked"
-         */
-        status?: "revoked" | (string & {});
-      },
+        decodeResponseEnums(_resp.data, { ref: "InvitationRevoked" }),
+        "InvitationRevoked",
+      ) as InvitationRevoked,
   );
 }
 

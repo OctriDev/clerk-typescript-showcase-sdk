@@ -274,7 +274,7 @@ export interface UpdateOrganizationParams {
   selfServeDirectorySyncEnabled?: boolean | null;
   createdAt?: string | null;
   roleSetKey?: string | null;
-  reassignmentMappings?: ReassignmentMappings | null;
+  reassignmentMappings?: ReassignmentMappings;
 }
 
 /**

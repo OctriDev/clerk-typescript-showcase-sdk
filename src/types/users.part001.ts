@@ -60,6 +60,20 @@ export interface BiometricCredential {
 }
 
 /**
+ * Typed representation of the `BiometricCredentialList` API schema.
+ */
+export interface BiometricCredentialList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: BiometricCredential[];
+  /**
+   * Total number of biometric credentials
+   */
+  totalCount: number;
+}
+
+/**
  * Typed representation of the `EnterpriseAccount` API schema.
  */
 export interface EnterpriseAccount {

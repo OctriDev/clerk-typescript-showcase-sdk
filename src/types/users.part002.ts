@@ -17,7 +17,22 @@ import type {
   Passkey,
   SAMLAccount,
   SCIMUserMetadata,
+  TrustedDevice,
 } from "./users.part001";
+
+/**
+ * Typed representation of the `TrustedDeviceList` API schema.
+ */
+export interface TrustedDeviceList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: TrustedDevice[];
+  /**
+   * Total number of trusted devices
+   */
+  totalCount: number;
+}
 
 /**
  * Typed representation of the `User` API schema.

@@ -198,7 +198,14 @@ export async function createSamlConnection(
     },
     config,
   });
-  return sdkDecode(_resp, () => decodeResponseEnums(_resp.data, { ref: "SAMLConnection" }));
+  return sdkDecode(
+    _resp,
+    () =>
+      fromWire(
+        decodeResponseEnums(_resp.data, { ref: "SAMLConnection" }),
+        "SAMLConnection",
+      ) as SAMLConnection,
+  );
 }
 
 export type GetSamlConnectionError = ClerkErrors;
@@ -228,7 +235,14 @@ export async function getSamlConnection(
     ...requestOptions,
     config,
   });
-  return sdkDecode(_resp, () => decodeResponseEnums(_resp.data, { ref: "SAMLConnection" }));
+  return sdkDecode(
+    _resp,
+    () =>
+      fromWire(
+        decodeResponseEnums(_resp.data, { ref: "SAMLConnection" }),
+        "SAMLConnection",
+      ) as SAMLConnection,
+  );
 }
 
 export type UpdateSamlConnectionError = ClerkErrors;
@@ -383,7 +397,14 @@ export async function updateSamlConnection(
     },
     config,
   });
-  return sdkDecode(_resp, () => decodeResponseEnums(_resp.data, { ref: "SAMLConnection" }));
+  return sdkDecode(
+    _resp,
+    () =>
+      fromWire(
+        decodeResponseEnums(_resp.data, { ref: "SAMLConnection" }),
+        "SAMLConnection",
+      ) as SAMLConnection,
+  );
 }
 
 export type DeleteSamlConnectionError = ClerkErrors;

@@ -2,10 +2,11 @@
 // This file is machine-generated from your OpenAPI spec.
 
 import {
-  SCIMDirectories,
   SCIMDirectory,
+  SCIMDirectoryList,
   SCIMGroupRoleMapping,
-  SCIMGroupRoleMappings,
+  SCIMGroupRoleMappingDeleted,
+  SCIMGroupRoleMappingList,
 } from "../types/scim-directories";
 import { ClerkErrors } from "../types/shared-clerk";
 import { DeletedObject } from "../types/shared";
@@ -33,13 +34,7 @@ export async function listScimDirectories(
   config: ClientConfig,
   { limit, offset }: ListScimDirectoriesParams = {},
   requestOptions?: RequestOptions,
-): Promise<{
-  data: SCIMDirectories;
-  /**
-   * Total number of directories.
-   */
-  totalCount: number;
-}> {
+): Promise<SCIMDirectoryList> {
   if (limit != null) {
     validateRange("limit", limit, { min: 1, max: 500 });
   }
@@ -48,13 +43,7 @@ export async function listScimDirectories(
     validateRange("offset", offset, { min: 0 });
   }
 
-  const _resp = await sdkRequest<{
-    data: SCIMDirectories;
-    /**
-     * Total number of directories.
-     */
-    totalCount: number;
-  }>({
+  const _resp = await sdkRequest<SCIMDirectoryList>({
     method: "GET",
     path: `/scim_directories`,
     operationId: "listScimDirectories",
@@ -71,19 +60,9 @@ export async function listScimDirectories(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, {
-          type: "object",
-          required: ["data", "total_count"],
-          properties: { data: { ref: "SCIMDirectories" } },
-        }),
-        "ListSCIMDirectories response",
-      ) as {
-        data: SCIMDirectories;
-        /**
-         * Total number of directories.
-         */
-        totalCount: number;
-      },
+        decodeResponseEnums(_resp.data, { ref: "SCIMDirectoryList" }),
+        "SCIMDirectoryList",
+      ) as SCIMDirectoryList,
   );
 }
 
@@ -357,20 +336,8 @@ export async function listScimGroupRoleMappings(
   config: ClientConfig,
   { scimDirectoryId }: ListScimGroupRoleMappingsParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  data: SCIMGroupRoleMappings;
-  /**
-   * Total number of SCIM group role mappings in the directory.
-   */
-  totalCount: number;
-}> {
-  const _resp = await sdkRequest<{
-    data: SCIMGroupRoleMappings;
-    /**
-     * Total number of SCIM group role mappings in the directory.
-     */
-    totalCount: number;
-  }>({
+): Promise<SCIMGroupRoleMappingList> {
+  const _resp = await sdkRequest<SCIMGroupRoleMappingList>({
     method: "GET",
     path: `/scim_directories/${encodePathSegment(scimDirectoryId)}/group_role_mappings`,
     operationId: "listScimGroupRoleMappings",
@@ -383,19 +350,9 @@ export async function listScimGroupRoleMappings(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, {
-          type: "object",
-          required: ["data", "total_count"],
-          properties: { data: { ref: "SCIMGroupRoleMappings" } },
-        }),
-        "ListSCIMGroupRoleMappings response",
-      ) as {
-        data: SCIMGroupRoleMappings;
-        /**
-         * Total number of SCIM group role mappings in the directory.
-         */
-        totalCount: number;
-      },
+        decodeResponseEnums(_resp.data, { ref: "SCIMGroupRoleMappingList" }),
+        "SCIMGroupRoleMappingList",
+      ) as SCIMGroupRoleMappingList,
   );
 }
 
@@ -485,20 +442,8 @@ export async function replaceScimGroupRoleMappings(
   config: ClientConfig,
   { scimDirectoryId, mappings }: ReplaceScimGroupRoleMappingsParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  data: SCIMGroupRoleMappings;
-  /**
-   * Total number of SCIM group role mappings in the directory.
-   */
-  totalCount: number;
-}> {
-  const _resp = await sdkRequest<{
-    data: SCIMGroupRoleMappings;
-    /**
-     * Total number of SCIM group role mappings in the directory.
-     */
-    totalCount: number;
-  }>({
+): Promise<SCIMGroupRoleMappingList> {
+  const _resp = await sdkRequest<SCIMGroupRoleMappingList>({
     method: "PUT",
     path: `/scim_directories/${encodePathSegment(scimDirectoryId)}/group_role_mappings`,
     operationId: "replaceScimGroupRoleMappings",
@@ -520,19 +465,9 @@ export async function replaceScimGroupRoleMappings(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, {
-          type: "object",
-          required: ["data", "total_count"],
-          properties: { data: { ref: "SCIMGroupRoleMappings" } },
-        }),
-        "ReplaceSCIMGroupRoleMappings response",
-      ) as {
-        data: SCIMGroupRoleMappings;
-        /**
-         * Total number of SCIM group role mappings in the directory.
-         */
-        totalCount: number;
-      },
+        decodeResponseEnums(_resp.data, { ref: "SCIMGroupRoleMappingList" }),
+        "SCIMGroupRoleMappingList",
+      ) as SCIMGroupRoleMappingList,
   );
 }
 
@@ -553,34 +488,8 @@ export async function deleteScimGroupRoleMapping(
   config: ClientConfig,
   { scimDirectoryId, mappingId }: DeleteScimGroupRoleMappingParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  /**
-   * String representing the object's type.
-   */
-  object: "scim_group_role_mapping" | (string & {});
-  /**
-   * The ID of the deleted SCIM group role mapping.
-   */
-  id: string;
-  /**
-   * Whether the SCIM group role mapping was successfully deleted.
-   */
-  deleted: boolean;
-}> {
-  const _resp = await sdkRequest<{
-    /**
-     * String representing the object's type.
-     */
-    object: "scim_group_role_mapping" | (string & {});
-    /**
-     * The ID of the deleted SCIM group role mapping.
-     */
-    id: string;
-    /**
-     * Whether the SCIM group role mapping was successfully deleted.
-     */
-    deleted: boolean;
-  }>({
+): Promise<SCIMGroupRoleMappingDeleted> {
+  const _resp = await sdkRequest<SCIMGroupRoleMappingDeleted>({
     method: "DELETE",
     path: `/scim_directories/${encodePathSegment(scimDirectoryId)}/group_role_mappings/${encodePathSegment(mappingId)}`,
     operationId: "deleteScimGroupRoleMapping",
@@ -595,7 +504,7 @@ export async function deleteScimGroupRoleMapping(
     config,
   });
   return sdkDecode(_resp, () =>
-    decodeResponseEnums(_resp.data, { type: "object", required: ["object", "id", "deleted"] }),
+    decodeResponseEnums(_resp.data, { ref: "SCIMGroupRoleMappingDeleted" }),
   );
 }
 

@@ -2,10 +2,11 @@
 // This file is machine-generated from your OpenAPI spec.
 
 import {
-  Directories,
   Directory,
   DirectoryGroupRoleMapping,
-  DirectoryGroupRoleMappings,
+  DirectoryGroupRoleMappingDeleted,
+  DirectoryGroupRoleMappingList,
+  DirectoryList,
 } from "../types/directories";
 import { ClerkErrors } from "../types/shared-clerk";
 import { DeletedObject } from "../types/shared";
@@ -33,13 +34,7 @@ export async function listDirectories(
   config: ClientConfig,
   { limit, offset }: ListDirectoriesParams = {},
   requestOptions?: RequestOptions,
-): Promise<{
-  data: Directories;
-  /**
-   * Total number of directories.
-   */
-  totalCount: number;
-}> {
+): Promise<DirectoryList> {
   if (limit != null) {
     validateRange("limit", limit, { min: 1, max: 500 });
   }
@@ -48,13 +43,7 @@ export async function listDirectories(
     validateRange("offset", offset, { min: 0 });
   }
 
-  const _resp = await sdkRequest<{
-    data: Directories;
-    /**
-     * Total number of directories.
-     */
-    totalCount: number;
-  }>({
+  const _resp = await sdkRequest<DirectoryList>({
     method: "GET",
     path: `/directories`,
     operationId: "listDirectories",
@@ -71,19 +60,9 @@ export async function listDirectories(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, {
-          type: "object",
-          required: ["data", "total_count"],
-          properties: { data: { ref: "Directories" } },
-        }),
-        "ListDirectories response",
-      ) as {
-        data: Directories;
-        /**
-         * Total number of directories.
-         */
-        totalCount: number;
-      },
+        decodeResponseEnums(_resp.data, { ref: "DirectoryList" }),
+        "DirectoryList",
+      ) as DirectoryList,
   );
 }
 
@@ -349,20 +328,8 @@ export async function listDirectoryGroupRoleMappings(
   config: ClientConfig,
   { directoryId }: ListDirectoryGroupRoleMappingsParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  data: DirectoryGroupRoleMappings;
-  /**
-   * Total number of directory group role mappings in the directory.
-   */
-  totalCount: number;
-}> {
-  const _resp = await sdkRequest<{
-    data: DirectoryGroupRoleMappings;
-    /**
-     * Total number of directory group role mappings in the directory.
-     */
-    totalCount: number;
-  }>({
+): Promise<DirectoryGroupRoleMappingList> {
+  const _resp = await sdkRequest<DirectoryGroupRoleMappingList>({
     method: "GET",
     path: `/directories/${encodePathSegment(directoryId)}/group_role_mappings`,
     operationId: "listDirectoryGroupRoleMappings",
@@ -375,19 +342,9 @@ export async function listDirectoryGroupRoleMappings(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, {
-          type: "object",
-          required: ["data", "total_count"],
-          properties: { data: { ref: "DirectoryGroupRoleMappings" } },
-        }),
-        "ListDirectoryGroupRoleMappings response",
-      ) as {
-        data: DirectoryGroupRoleMappings;
-        /**
-         * Total number of directory group role mappings in the directory.
-         */
-        totalCount: number;
-      },
+        decodeResponseEnums(_resp.data, { ref: "DirectoryGroupRoleMappingList" }),
+        "DirectoryGroupRoleMappingList",
+      ) as DirectoryGroupRoleMappingList,
   );
 }
 
@@ -493,20 +450,8 @@ export async function replaceDirectoryGroupRoleMappings(
   config: ClientConfig,
   { directoryId, mappings }: ReplaceDirectoryGroupRoleMappingsParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  data: DirectoryGroupRoleMappings;
-  /**
-   * Total number of directory group role mappings in the directory.
-   */
-  totalCount: number;
-}> {
-  const _resp = await sdkRequest<{
-    data: DirectoryGroupRoleMappings;
-    /**
-     * Total number of directory group role mappings in the directory.
-     */
-    totalCount: number;
-  }>({
+): Promise<DirectoryGroupRoleMappingList> {
+  const _resp = await sdkRequest<DirectoryGroupRoleMappingList>({
     method: "PUT",
     path: `/directories/${encodePathSegment(directoryId)}/group_role_mappings`,
     operationId: "replaceDirectoryGroupRoleMappings",
@@ -528,19 +473,9 @@ export async function replaceDirectoryGroupRoleMappings(
     _resp,
     () =>
       fromWire(
-        decodeResponseEnums(_resp.data, {
-          type: "object",
-          required: ["data", "total_count"],
-          properties: { data: { ref: "DirectoryGroupRoleMappings" } },
-        }),
-        "ReplaceDirectoryGroupRoleMappings response",
-      ) as {
-        data: DirectoryGroupRoleMappings;
-        /**
-         * Total number of directory group role mappings in the directory.
-         */
-        totalCount: number;
-      },
+        decodeResponseEnums(_resp.data, { ref: "DirectoryGroupRoleMappingList" }),
+        "DirectoryGroupRoleMappingList",
+      ) as DirectoryGroupRoleMappingList,
   );
 }
 
@@ -561,34 +496,8 @@ export async function deleteDirectoryGroupRoleMapping(
   config: ClientConfig,
   { directoryId, mappingId }: DeleteDirectoryGroupRoleMappingParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  /**
-   * String representing the object's type.
-   */
-  object: "directory_group_role_mapping" | (string & {});
-  /**
-   * The ID of the deleted directory group role mapping.
-   */
-  id: string;
-  /**
-   * Whether the directory group role mapping was successfully deleted.
-   */
-  deleted: boolean;
-}> {
-  const _resp = await sdkRequest<{
-    /**
-     * String representing the object's type.
-     */
-    object: "directory_group_role_mapping" | (string & {});
-    /**
-     * The ID of the deleted directory group role mapping.
-     */
-    id: string;
-    /**
-     * Whether the directory group role mapping was successfully deleted.
-     */
-    deleted: boolean;
-  }>({
+): Promise<DirectoryGroupRoleMappingDeleted> {
+  const _resp = await sdkRequest<DirectoryGroupRoleMappingDeleted>({
     method: "DELETE",
     path: `/directories/${encodePathSegment(directoryId)}/group_role_mappings/${encodePathSegment(mappingId)}`,
     operationId: "deleteDirectoryGroupRoleMapping",
@@ -603,7 +512,7 @@ export async function deleteDirectoryGroupRoleMapping(
     config,
   });
   return sdkDecode(_resp, () =>
-    decodeResponseEnums(_resp.data, { type: "object", required: ["object", "id", "deleted"] }),
+    decodeResponseEnums(_resp.data, { ref: "DirectoryGroupRoleMappingDeleted" }),
   );
 }
 

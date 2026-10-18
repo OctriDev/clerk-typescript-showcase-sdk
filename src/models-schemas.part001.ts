@@ -170,7 +170,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "SAMLAccountConnection",
     parseRuntimeSchema(
-      '{"type":"object","required":["id","name","active","provider","syncUserAttributes","createdAt","updatedAt"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"domain":{"type":"string"},"domains":{"type":"array","items":{"type":"string"}},"active":{"type":"boolean"},"provider":{"type":"string"},"syncUserAttributes":{"type":"boolean"},"allowSubdomains":{"type":"boolean"},"allowIdpInitiated":{"type":"boolean"},"disableAdditionalIdentifications":{"type":"boolean"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}},"anyOf":[{"required":["domain"]},{"required":["domains"]}]}',
+      '{"type":"object","required":["id","name","active","provider","syncUserAttributes","createdAt","updatedAt"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"domain":{"type":"string"},"domains":{"type":"array","items":{"type":"string"}},"active":{"type":"boolean"},"provider":{"type":"string"},"syncUserAttributes":{"type":"boolean"},"allowSubdomains":{"type":"boolean"},"allowIdpInitiated":{"type":"boolean"},"disableAdditionalIdentifications":{"type":"boolean"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}}',
     ),
   ],
 
@@ -184,7 +184,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "EnterpriseAccountConnection",
     parseRuntimeSchema(
-      '{"type":"object","required":["id","protocol","name","logoPublicUrl","active","provider","syncUserAttributes","disableAdditionalIdentifications","allowSubdomains","allowIdpInitiated","createdAt","updatedAt"],"properties":{"id":{"type":"string"},"protocol":{"type":"string"},"provider":{"type":"string"},"name":{"type":"string"},"logoPublicUrl":{"type":"string","nullable":true},"domain":{"type":"string"},"domains":{"type":"array","items":{"type":"string"}},"active":{"type":"boolean"},"syncUserAttributes":{"type":"boolean"},"allowSubdomains":{"type":"boolean"},"allowIdpInitiated":{"type":"boolean"},"disableAdditionalIdentifications":{"type":"boolean"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}},"anyOf":[{"required":["domain"]},{"required":["domains"]}]}',
+      '{"type":"object","required":["id","protocol","name","logoPublicUrl","active","provider","syncUserAttributes","disableAdditionalIdentifications","allowSubdomains","allowIdpInitiated","createdAt","updatedAt"],"properties":{"id":{"type":"string"},"protocol":{"type":"string"},"provider":{"type":"string"},"name":{"type":"string"},"logoPublicUrl":{"type":"string","nullable":true},"domain":{"type":"string"},"domains":{"type":"array","items":{"type":"string"}},"active":{"type":"boolean"},"syncUserAttributes":{"type":"boolean"},"allowSubdomains":{"type":"boolean"},"allowIdpInitiated":{"type":"boolean"},"disableAdditionalIdentifications":{"type":"boolean"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}}',
     ),
   ],
 
@@ -212,7 +212,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "OrganizationMembership",
     parseRuntimeSchema(
-      '{"type":"object","required":["object","id","role","permissions","publicMetadata","createdAt","updatedAt","organization"],"properties":{"id":{"type":"string"},"object":{"type":"string"},"role":{"type":"string"},"roleName":{"type":"string"},"permissions":{"type":"array","items":{"type":"string"}},"publicMetadata":{"type":"object"},"privateMetadata":{"type":"object"},"organization":{"type":"object","nullable":false,"allOf":[{"ref":"Organization"}]},"publicUserData":{"ref":"OrganizationMembershipPublicUserData"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}}',
+      '{"type":"object","required":["object","id","role","permissions","publicMetadata","createdAt","updatedAt","organization"],"properties":{"id":{"type":"string"},"object":{"type":"string"},"role":{"type":"string"},"roleName":{"type":"string"},"permissions":{"type":"array","items":{"type":"string"}},"publicMetadata":{"type":"object"},"privateMetadata":{"type":"object"},"organization":{"ref":"Organization"},"publicUserData":{"ref":"OrganizationMembershipPublicUserData"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}}',
     ),
   ],
 
@@ -226,7 +226,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "User",
     parseRuntimeSchema(
-      '{"type":"object","required":["id","object","username","firstName","lastName","hasImage","primaryEmailAddressId","primaryPhoneNumberId","primaryWeb3WalletId","passwordEnabled","twoFactorEnabled","totpEnabled","backupCodeEnabled","emailAddresses","phoneNumbers","web3Wallets","passkeys","externalAccounts","samlAccounts","enterpriseAccounts","publicMetadata","externalId","lastSignInAt","banned","locked","lockoutExpiresInSeconds","verificationAttemptsRemaining","createdAt","updatedAt","deleteSelfEnabled","createOrganizationEnabled","lastActiveAt","mfaEnabledAt","mfaDisabledAt","legalAcceptedAt"],"properties":{"id":{"type":"string"},"object":{"type":"string"},"externalId":{"type":"string","nullable":true},"primaryEmailAddressId":{"type":"string","nullable":true},"primaryPhoneNumberId":{"type":"string","nullable":true},"primaryWeb3WalletId":{"type":"string","nullable":true},"username":{"type":"string","nullable":true},"firstName":{"type":"string","nullable":true},"lastName":{"type":"string","nullable":true},"locale":{"type":"string","nullable":true},"timezone":{"type":"string","nullable":true},"profileImageUrl":{"type":"string"},"imageUrl":{"type":"string"},"hasImage":{"type":"boolean"},"publicMetadata":{"type":"object"},"privateMetadata":{"type":"object","nullable":true},"unsafeMetadata":{"type":"object"},"emailAddresses":{"type":"array","items":{"ref":"EmailAddress"}},"phoneNumbers":{"type":"array","items":{"ref":"PhoneNumber"}},"web3Wallets":{"type":"array","items":{"ref":"Web3Wallet"}},"passkeys":{"type":"array","items":{"ref":"Passkey"}},"passwordEnabled":{"type":"boolean"},"twoFactorEnabled":{"type":"boolean"},"totpEnabled":{"type":"boolean"},"backupCodeEnabled":{"type":"boolean"},"mfaEnabledAt":{"type":"integer","nullable":true},"mfaDisabledAt":{"type":"integer","nullable":true},"passwordLastUpdatedAt":{"type":"integer","nullable":true},"externalAccounts":{"type":"array","items":{"ref":"ExternalAccountWithVerification"}},"samlAccounts":{"type":"array","items":{"ref":"SAMLAccount"}},"enterpriseAccounts":{"type":"array","items":{"ref":"EnterpriseAccount"}},"organizationMemberships":{"type":"array","items":{"ref":"OrganizationMembership"}},"lastSignInAt":{"type":"integer","nullable":true},"banned":{"type":"boolean"},"locked":{"type":"boolean"},"deprovisioned":{"type":"boolean"},"lockoutExpiresInSeconds":{"type":"integer","nullable":true},"verificationAttemptsRemaining":{"type":"integer","nullable":true},"updatedAt":{"type":"integer"},"createdAt":{"type":"integer"},"deleteSelfEnabled":{"type":"boolean"},"createOrganizationEnabled":{"type":"boolean"},"createOrganizationsLimit":{"type":"integer","nullable":true},"lastActiveAt":{"type":"integer","nullable":true},"legalAcceptedAt":{"type":"integer","nullable":true},"bypassClientTrust":{"type":"boolean"},"directories":{"type":"array","items":{"ref":"SCIMUserMetadata"}},"directory":{"allOf":[{"ref":"SCIMUserMetadata"}]},"scim":{"nullable":true,"allOf":[{"ref":"SCIMUserMetadata"}]}}}',
+      '{"type":"object","required":["id","object","username","firstName","lastName","hasImage","primaryEmailAddressId","primaryPhoneNumberId","primaryWeb3WalletId","passwordEnabled","twoFactorEnabled","totpEnabled","backupCodeEnabled","emailAddresses","phoneNumbers","web3Wallets","passkeys","externalAccounts","samlAccounts","enterpriseAccounts","publicMetadata","externalId","lastSignInAt","banned","locked","lockoutExpiresInSeconds","verificationAttemptsRemaining","createdAt","updatedAt","deleteSelfEnabled","createOrganizationEnabled","lastActiveAt","mfaEnabledAt","mfaDisabledAt","legalAcceptedAt"],"properties":{"id":{"type":"string"},"object":{"type":"string"},"externalId":{"type":"string","nullable":true},"primaryEmailAddressId":{"type":"string","nullable":true},"primaryPhoneNumberId":{"type":"string","nullable":true},"primaryWeb3WalletId":{"type":"string","nullable":true},"username":{"type":"string","nullable":true},"firstName":{"type":"string","nullable":true},"lastName":{"type":"string","nullable":true},"locale":{"type":"string","nullable":true},"timezone":{"type":"string","nullable":true},"profileImageUrl":{"type":"string"},"imageUrl":{"type":"string"},"hasImage":{"type":"boolean"},"publicMetadata":{"type":"object"},"privateMetadata":{"type":"object","nullable":true},"unsafeMetadata":{"type":"object"},"emailAddresses":{"type":"array","items":{"ref":"EmailAddress"}},"phoneNumbers":{"type":"array","items":{"ref":"PhoneNumber"}},"web3Wallets":{"type":"array","items":{"ref":"Web3Wallet"}},"passkeys":{"type":"array","items":{"ref":"Passkey"}},"passwordEnabled":{"type":"boolean"},"twoFactorEnabled":{"type":"boolean"},"totpEnabled":{"type":"boolean"},"backupCodeEnabled":{"type":"boolean"},"mfaEnabledAt":{"type":"integer","nullable":true},"mfaDisabledAt":{"type":"integer","nullable":true},"passwordLastUpdatedAt":{"type":"integer","nullable":true},"externalAccounts":{"type":"array","items":{"ref":"ExternalAccountWithVerification"}},"samlAccounts":{"type":"array","items":{"ref":"SAMLAccount"}},"enterpriseAccounts":{"type":"array","items":{"ref":"EnterpriseAccount"}},"organizationMemberships":{"type":"array","items":{"ref":"OrganizationMembership"}},"lastSignInAt":{"type":"integer","nullable":true},"banned":{"type":"boolean"},"locked":{"type":"boolean"},"deprovisioned":{"type":"boolean"},"lockoutExpiresInSeconds":{"type":"integer","nullable":true},"verificationAttemptsRemaining":{"type":"integer","nullable":true},"updatedAt":{"type":"integer"},"createdAt":{"type":"integer"},"deleteSelfEnabled":{"type":"boolean"},"createOrganizationEnabled":{"type":"boolean"},"createOrganizationsLimit":{"type":"integer","nullable":true},"lastActiveAt":{"type":"integer","nullable":true},"legalAcceptedAt":{"type":"integer","nullable":true},"bypassClientTrust":{"type":"boolean"},"directories":{"type":"array","items":{"ref":"SCIMUserMetadata"}},"directory":{"ref":"SCIMUserMetadata"},"scim":{"ref":"SCIMUserMetadata"}}}',
     ),
   ],
 
@@ -241,6 +241,13 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
     "CommerceMoneyResponse",
     parseRuntimeSchema(
       '{"type":"object","required":["amount","amountFormatted","currency","currencySymbol"],"properties":{"amount":{"type":"integer"},"amountFormatted":{"type":"string"},"currency":{"type":"string"},"currencySymbol":{"type":"string"}}}',
+    ),
+  ],
+
+  [
+    "CommerceSubscriptionCreditResponse",
+    parseRuntimeSchema(
+      '{"type":"object","properties":{"amount":{"ref":"CommerceMoneyResponse"},"cycleRemainingPercent":{"type":"number"}}}',
     ),
   ],
 
@@ -261,7 +268,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "CommerceCreditsResponse",
     parseRuntimeSchema(
-      '{"type":"object","required":["proration","payer","total"],"properties":{"proration":{"nullable":true,"allOf":[{"ref":"CommerceProrationCreditDetailResponse"}]},"payer":{"nullable":true,"allOf":[{"ref":"CommercePayerCreditResponse"}]},"total":{"ref":"CommerceMoneyResponse"}}}',
+      '{"type":"object","required":["proration","payer","total"],"properties":{"proration":{"ref":"CommerceProrationCreditDetailResponse"},"payer":{"ref":"CommercePayerCreditResponse"},"total":{"ref":"CommerceMoneyResponse"}}}',
     ),
   ],
 
@@ -289,7 +296,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "CommercePlan",
     parseRuntimeSchema(
-      '{"type":"object","required":["object","id","name","fee","annualMonthlyFee","annualFee","description","productId","isDefault","isRecurring","publiclyVisible","hasBaseFee","forPayerType","slug","avatarUrl","freeTrialEnabled","freeTrialDays"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"fee":{"nullable":true,"allOf":[{"ref":"CommerceMoneyResponse"}]},"annualMonthlyFee":{"nullable":true,"allOf":[{"ref":"CommerceMoneyResponse"}]},"annualFee":{"nullable":true,"allOf":[{"ref":"CommerceMoneyResponse"}]},"description":{"type":"string","nullable":true},"productId":{"type":"string"},"isDefault":{"type":"boolean"},"isRecurring":{"type":"boolean"},"publiclyVisible":{"type":"boolean"},"hasBaseFee":{"type":"boolean"},"forPayerType":{"type":"string"},"slug":{"type":"string"},"avatarUrl":{"type":"string","nullable":true},"features":{"type":"array","items":{"ref":"FeatureResponse"}},"freeTrialEnabled":{"type":"boolean"},"freeTrialDays":{"type":"integer","nullable":true},"unitPrices":{"type":"array","items":{"ref":"CommercePlanUnitPrice"}}}}',
+      '{"type":"object","required":["object","id","name","fee","annualMonthlyFee","annualFee","description","productId","isDefault","isRecurring","publiclyVisible","hasBaseFee","forPayerType","slug","avatarUrl","freeTrialEnabled","freeTrialDays"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"fee":{"ref":"CommerceMoneyResponse"},"annualMonthlyFee":{"ref":"CommerceMoneyResponse"},"annualFee":{"ref":"CommerceMoneyResponse"},"description":{"type":"string","nullable":true},"productId":{"type":"string"},"isDefault":{"type":"boolean"},"isRecurring":{"type":"boolean"},"publiclyVisible":{"type":"boolean"},"hasBaseFee":{"type":"boolean"},"forPayerType":{"type":"string"},"slug":{"type":"string"},"avatarUrl":{"type":"string","nullable":true},"features":{"type":"array","items":{"ref":"FeatureResponse"}},"freeTrialEnabled":{"type":"boolean"},"freeTrialDays":{"type":"integer","nullable":true},"unitPrices":{"type":"array","items":{"ref":"CommercePlanUnitPrice"}}}}',
     ),
   ],
 
@@ -324,21 +331,21 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "CommerceDiscountsResponse",
     parseRuntimeSchema(
-      '{"type":"object","required":["proration","total"],"properties":{"proration":{"nullable":true,"allOf":[{"ref":"CommerceProrationDiscountResponse"}]},"total":{"ref":"CommerceMoneyResponse"}}}',
+      '{"type":"object","required":["proration","total"],"properties":{"proration":{"ref":"CommerceProrationDiscountResponse"},"total":{"ref":"CommerceMoneyResponse"}}}',
     ),
   ],
 
   [
     "CommerceTotalsResponse",
     parseRuntimeSchema(
-      '{"type":"object","required":["subtotal","baseFee","taxTotal","grandTotal"],"properties":{"subtotal":{"ref":"CommerceMoneyResponse"},"baseFee":{"ref":"CommerceMoneyResponse"},"taxTotal":{"ref":"CommerceMoneyResponse"},"grandTotal":{"ref":"CommerceMoneyResponse"},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal"}},"credits":{"nullable":true,"allOf":[{"ref":"CommerceCreditsResponse"}]},"discounts":{"nullable":true,"allOf":[{"ref":"CommerceDiscountsResponse"}]}}}',
+      '{"type":"object","required":["subtotal","baseFee","taxTotal","grandTotal"],"properties":{"subtotal":{"ref":"CommerceMoneyResponse"},"baseFee":{"ref":"CommerceMoneyResponse"},"taxTotal":{"ref":"CommerceMoneyResponse"},"grandTotal":{"ref":"CommerceMoneyResponse"},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal"}},"credits":{"ref":"CommerceCreditsResponse"},"discounts":{"ref":"CommerceDiscountsResponse"}}}',
     ),
   ],
 
   [
     "CommerceSubscriptionItemNextPaymentResponse",
     parseRuntimeSchema(
-      '{"type":"object","properties":{"amount":{"nullable":true,"allOf":[{"ref":"CommerceMoneyResponse"}]},"date":{"type":"integer","nullable":true},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal"}},"totals":{"nullable":true,"allOf":[{"ref":"CommerceTotalsResponse"}]}}}',
+      '{"type":"object","properties":{"amount":{"ref":"CommerceMoneyResponse"},"date":{"type":"integer","nullable":true},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal"}},"totals":{"ref":"CommerceTotalsResponse"}}}',
     ),
   ],
 
@@ -380,28 +387,28 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BillingDiscountsResponse",
     parseRuntimeSchema(
-      '{"type":"object","required":["proration","total"],"properties":{"proration":{"type":"object","nullable":true,"allOf":[{"ref":"BillingProrationDiscountDetail"}]},"total":{"ref":"CommerceMoneyResponse"}}}',
+      '{"type":"object","required":["proration","total"],"properties":{"proration":{"ref":"BillingProrationDiscountDetail"},"total":{"ref":"CommerceMoneyResponse"}}}',
     ),
   ],
 
   [
     "CommerceTotalsResponse2",
     parseRuntimeSchema(
-      '{"type":"object","required":["subtotal","baseFee","taxTotal","grandTotal"],"properties":{"subtotal":{"ref":"CommerceMoneyResponse"},"baseFee":{"ref":"CommerceMoneyResponse"},"taxTotal":{"ref":"CommerceMoneyResponse"},"grandTotal":{"ref":"CommerceMoneyResponse"},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal2"}},"credits":{"nullable":true,"allOf":[{"ref":"CommerceCreditsResponse"}]},"discounts":{"type":"object","nullable":true,"allOf":[{"ref":"BillingDiscountsResponse"}]}}}',
+      '{"type":"object","required":["subtotal","baseFee","taxTotal","grandTotal"],"properties":{"subtotal":{"ref":"CommerceMoneyResponse"},"baseFee":{"ref":"CommerceMoneyResponse"},"taxTotal":{"ref":"CommerceMoneyResponse"},"grandTotal":{"ref":"CommerceMoneyResponse"},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal2"}},"credits":{"ref":"CommerceCreditsResponse"},"discounts":{"ref":"BillingDiscountsResponse"}}}',
     ),
   ],
 
   [
     "CommerceSubscriptionItem",
     parseRuntimeSchema(
-      '{"type":"object","required":["object","id","instanceId","status","planId","planPeriod","payerId","isFreeTrial","periodStart","periodEnd","canceledAt","pastDueAt","endedAt"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"instanceId":{"type":"string"},"status":{"type":"string"},"credit":{"ref":"CommerceSubscriptionCreditResponse"},"credits":{"nullable":true,"allOf":[{"ref":"CommerceCreditsResponse"}]},"planId":{"type":"string","nullable":true},"priceId":{"type":"string"},"plan":{"nullable":true,"allOf":[{"ref":"CommercePlan"}]},"planPeriod":{"type":"string"},"paymentMethod":{"ref":"CommercePaymentMethodResponse"},"lifetimePaid":{"ref":"CommerceMoneyResponse"},"nextPayment":{"nullable":true,"allOf":[{"ref":"CommerceSubscriptionItemNextPaymentResponse"}]},"payerId":{"type":"string"},"payer":{"ref":"CommercePayerResponse"},"isFreeTrial":{"type":"boolean"},"periodStart":{"type":"integer"},"periodEnd":{"type":"integer","nullable":true},"prorationDate":{"type":"string","format":"date"},"canceledAt":{"type":"integer","nullable":true},"pastDueAt":{"type":"integer","nullable":true},"endedAt":{"type":"integer","nullable":true},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"},"seats":{"nullable":true,"allOf":[{"ref":"CommerceSubscriptionItemSeatsResponse"}]},"totals":{"nullable":true,"allOf":[{"ref":"CommerceTotalsResponse2"}]}}}',
+      '{"type":"object","required":["object","id","instanceId","status","planId","planPeriod","payerId","isFreeTrial","periodStart","periodEnd","canceledAt","pastDueAt","endedAt"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"instanceId":{"type":"string"},"status":{"type":"string"},"credit":{"ref":"CommerceSubscriptionCreditResponse"},"credits":{"ref":"CommerceCreditsResponse"},"planId":{"type":"string","nullable":true},"priceId":{"type":"string"},"plan":{"ref":"CommercePlan"},"planPeriod":{"type":"string"},"paymentMethod":{"ref":"CommercePaymentMethodResponse"},"lifetimePaid":{"ref":"CommerceMoneyResponse"},"nextPayment":{"ref":"CommerceSubscriptionItemNextPaymentResponse"},"payerId":{"type":"string"},"payer":{"ref":"CommercePayerResponse"},"isFreeTrial":{"type":"boolean"},"periodStart":{"type":"integer"},"periodEnd":{"type":"integer","nullable":true},"prorationDate":{"type":"string","format":"date"},"canceledAt":{"type":"integer","nullable":true},"pastDueAt":{"type":"integer","nullable":true},"endedAt":{"type":"integer","nullable":true},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"},"seats":{"ref":"CommerceSubscriptionItemSeatsResponse"},"totals":{"ref":"CommerceTotalsResponse2"}}}',
     ),
   ],
 
   [
     "CommerceSubscriptionNextPayment",
     parseRuntimeSchema(
-      '{"type":"object","required":["date","amount"],"properties":{"date":{"type":"integer"},"amount":{"ref":"CommerceMoneyResponse"},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal2"}},"totals":{"nullable":true,"allOf":[{"ref":"CommerceTotalsResponse2"}]}}}',
+      '{"type":"object","required":["date","amount"],"properties":{"date":{"type":"integer"},"amount":{"ref":"CommerceMoneyResponse"},"perUnitTotals":{"type":"array","items":{"ref":"CommercePerUnitTotal2"}},"totals":{"ref":"CommerceTotalsResponse2"}}}',
     ),
   ],
 
@@ -415,7 +422,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "CommerceCreditBalanceResponse",
     parseRuntimeSchema(
-      '{"type":"object","required":["object","balance"],"properties":{"object":{"type":"string"},"balance":{"nullable":true,"allOf":[{"ref":"CommerceMoneyResponse"}]}}}',
+      '{"type":"object","required":["object","balance"],"properties":{"object":{"type":"string"},"balance":{"ref":"CommerceMoneyResponse"}}}',
     ),
   ],
 
@@ -464,7 +471,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "OrganizationInvitationWithPublicOrganizationData",
     parseRuntimeSchema(
-      '{"type":"object","required":["object","id","email_address","role","role_name","public_metadata","url","expires_at","created_at","updated_at","inviter_id","public_inviter_data"],"allOf":[{"properties":{"object":{"type":"string"},"id":{"type":"string"},"emailAddress":{"type":"string"},"role":{"type":"string"},"roleName":{"type":"string"},"organizationId":{"type":"string"},"inviterId":{"type":"string","nullable":true},"publicInviterData":{"ref":"OrganizationInvitationPublicUserData"},"status":{"type":"string"},"publicMetadata":{"type":"object"},"privateMetadata":{"type":"object"},"url":{"type":"string","nullable":true},"expiresAt":{"type":"integer","nullable":true},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}},{"properties":{"publicOrganizationData":{"ref":"OrganizationInvitationPublicOrganizationData"}}}]}',
+      '{"type":"object","required":["object","id","email_address","role","role_name","public_metadata","url","expires_at","created_at","updated_at","inviter_id","public_inviter_data"],"allOf":[{"type":"object","properties":{"object":{"type":"string"},"id":{"type":"string"},"emailAddress":{"type":"string"},"role":{"type":"string"},"roleName":{"type":"string"},"organizationId":{"type":"string"},"inviterId":{"type":"string","nullable":true},"publicInviterData":{"ref":"OrganizationInvitationPublicUserData"},"status":{"type":"string"},"publicMetadata":{"type":"object"},"privateMetadata":{"type":"object"},"url":{"type":"string","nullable":true},"expiresAt":{"type":"integer","nullable":true},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}},{"type":"object","properties":{"publicOrganizationData":{"ref":"OrganizationInvitationPublicOrganizationData"}}}]}',
     ),
   ],
 
@@ -660,7 +667,7 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
   [
     "OrganizationDomain",
     parseRuntimeSchema(
-      '{"type":"object","required":["object","id","organizationId","name","enrollmentMode","affiliationEmailAddress","affiliationVerification","ownershipVerification","verification","totalPendingInvitations","totalPendingSuggestions","createdAt","updatedAt"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"organizationId":{"type":"string"},"name":{"type":"string"},"enrollmentMode":{"type":"string"},"affiliationEmailAddress":{"type":"string","nullable":true},"affiliationVerification":{"type":"object","nullable":true,"allOf":[{"ref":"OrganizationDomainVerification"}]},"ownershipVerification":{"type":"object","nullable":true,"allOf":[{"ref":"OrganizationDomainVerification"}]},"verification":{"type":"object","nullable":true,"allOf":[{"ref":"OrganizationDomainVerification"}]},"totalPendingInvitations":{"type":"integer"},"totalPendingSuggestions":{"type":"integer"},"publicOrganizationData":{"type":"object","nullable":true,"allOf":[{"ref":"OrganizationInvitationPublicOrganizationData"}]},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}}',
+      '{"type":"object","required":["object","id","organizationId","name","enrollmentMode","affiliationEmailAddress","affiliationVerification","ownershipVerification","verification","totalPendingInvitations","totalPendingSuggestions","createdAt","updatedAt"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"organizationId":{"type":"string"},"name":{"type":"string"},"enrollmentMode":{"type":"string"},"affiliationEmailAddress":{"type":"string","nullable":true},"affiliationVerification":{"ref":"OrganizationDomainVerification"},"ownershipVerification":{"ref":"OrganizationDomainVerification"},"verification":{"ref":"OrganizationDomainVerification"},"totalPendingInvitations":{"type":"integer"},"totalPendingSuggestions":{"type":"integer"},"publicOrganizationData":{"ref":"OrganizationInvitationPublicOrganizationData"},"createdAt":{"type":"integer"},"updatedAt":{"type":"integer"}}}',
     ),
   ],
 
@@ -696,13 +703,6 @@ export const modelSchemasPart001: readonly (readonly [string, RuntimeSchema])[] 
     "SignUpVerifications",
     parseRuntimeSchema(
       '{"type":"object","required":["emailAddress","phoneNumber","web3Wallet","externalAccount"],"properties":{"emailAddress":{"ref":"SignUpVerification"},"phoneNumber":{"ref":"SignUpVerification"},"web3Wallet":{"ref":"SignUpVerification"},"externalAccount":{"type":"object","nullable":true}}}',
-    ),
-  ],
-
-  [
-    "SignUp",
-    parseRuntimeSchema(
-      '{"type":"object","required":["object","id","status","requiredFields","optionalFields","missingFields","unverifiedFields","verifications","username","emailAddress","phoneNumber","web3Wallet","passwordEnabled","firstName","lastName","customAction","externalId","createdSessionId","createdUserId","abandonAt","legalAcceptedAt"],"properties":{"object":{"type":"string"},"id":{"type":"string"},"status":{"type":"string"},"requiredFields":{"type":"array","items":{"type":"string"}},"optionalFields":{"type":"array","items":{"type":"string"}},"missingFields":{"type":"array","items":{"type":"string"}},"unverifiedFields":{"type":"array","items":{"type":"string"}},"verifications":{"ref":"SignUpVerifications"},"username":{"type":"string","nullable":true},"emailAddress":{"type":"string","nullable":true},"phoneNumber":{"type":"string","nullable":true},"web3Wallet":{"type":"string","nullable":true},"passwordEnabled":{"type":"boolean"},"firstName":{"type":"string","nullable":true},"lastName":{"type":"string","nullable":true},"unsafeMetadata":{"type":"object"},"publicMetadata":{"type":"object"},"customAction":{"type":"boolean"},"externalId":{"type":"string","nullable":true},"createdSessionId":{"type":"string","nullable":true},"createdUserId":{"type":"string","nullable":true},"abandonAt":{"type":"integer"},"legalAcceptedAt":{"type":"integer","nullable":true},"timezone":{"type":"string","nullable":true},"locale":{"type":"string","nullable":true},"externalAccount":{"type":"object"}}}',
     ),
   ],
 ];

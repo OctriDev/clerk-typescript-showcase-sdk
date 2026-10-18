@@ -156,11 +156,11 @@ export interface BillingPriceResponse {
    */
   annualMonthlyAmount: number;
   /**
-   * Required API value serialized in the `fee` wire field.
+   * Required object value serialized in the `fee` wire field.
    */
   fee: CommerceMoneyResponse | null;
   /**
-   * Required API value serialized in the `annual_monthly_fee` wire field.
+   * Required object value serialized in the `annual_monthly_fee` wire field.
    */
   annualMonthlyFee: CommerceMoneyResponse | null;
   /**
@@ -469,15 +469,15 @@ export interface CommercePlan2 {
    */
   name: string;
   /**
-   * Required API value serialized in the `fee` wire field.
+   * Required object value serialized in the `fee` wire field.
    */
   fee: CommerceMoneyResponse | null;
   /**
-   * Required API value serialized in the `annual_monthly_fee` wire field.
+   * Required object value serialized in the `annual_monthly_fee` wire field.
    */
   annualMonthlyFee: CommerceMoneyResponse | null;
   /**
-   * Required API value serialized in the `annual_fee` wire field.
+   * Required object value serialized in the `annual_fee` wire field.
    */
   annualFee: CommerceMoneyResponse | null;
   /**

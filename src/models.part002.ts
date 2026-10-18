@@ -92,7 +92,7 @@ export function createSAMLConnectionLoginHint(
 
 /** Constructs a validated SAMLConnection model value. */
 export function createSAMLConnection(value: Types.SAMLConnection): Types.SAMLConnection {
-  return modelRuntime.validate(value, "SAMLConnection");
+  return modelRuntime.validate({ ...value }, "SAMLConnection");
 }
 
 /** Constructs a validated SAMLConnections model value. */
@@ -410,6 +410,112 @@ export function createVerificationGoogleOneTap(
   value: Types.VerificationGoogleOneTap,
 ): Types.VerificationGoogleOneTap {
   return modelRuntime.validate({ ...value }, "VerificationGoogleOneTap");
+}
+
+/** Constructs a validated VerifyOAuthAccessTokenResponse model value. */
+export function createVerifyOAuthAccessTokenResponse(
+  value: Types.VerifyOAuthAccessTokenResponse,
+): Types.VerifyOAuthAccessTokenResponse {
+  return modelRuntime.validate(value, "VerifyOAuthAccessTokenResponse");
+}
+
+/** Constructs a validated VerificationResponse model value. */
+export function createVerificationResponse(
+  value: Types.VerificationResponse,
+): Types.VerificationResponse {
+  return modelRuntime.validate(value, "VerificationResponse");
+}
+
+/** Constructs a validated TrustedDeviceList model value. */
+export function createTrustedDeviceList(value: Types.TrustedDeviceList): Types.TrustedDeviceList {
+  return modelRuntime.validate(value, "TrustedDeviceList");
+}
+
+/** Constructs a validated BiometricCredentialList model value. */
+export function createBiometricCredentialList(
+  value: Types.BiometricCredentialList,
+): Types.BiometricCredentialList {
+  return modelRuntime.validate(value, "BiometricCredentialList");
+}
+
+/** Constructs a validated InvitationRevoked model value. */
+export function createInvitationRevoked(value: Types.InvitationRevoked): Types.InvitationRevoked {
+  return modelRuntime.validate(value, "InvitationRevoked");
+}
+
+/** Constructs a validated InstanceSettings model value. */
+export function createInstanceSettings(value: Types.InstanceSettings): Types.InstanceSettings {
+  return modelRuntime.validate(value, "InstanceSettings");
+}
+
+/** Constructs a validated MachineList model value. */
+export function createMachineList(value: Types.MachineList): Types.MachineList {
+  return modelRuntime.validate(value, "MachineList");
+}
+
+/** Constructs a validated MachineCreated model value. */
+export function createMachineCreated(value: Types.MachineCreated): Types.MachineCreated {
+  return modelRuntime.validate(value, "MachineCreated");
+}
+
+/** Constructs a validated MachineDeleted model value. */
+export function createMachineDeleted(value: Types.MachineDeleted): Types.MachineDeleted {
+  return modelRuntime.validate(value, "MachineDeleted");
+}
+
+/** Constructs a validated MachineSecretKey model value. */
+export function createMachineSecretKey(value: Types.MachineSecretKey): Types.MachineSecretKey {
+  return modelRuntime.validate(value, "MachineSecretKey");
+}
+
+/** Constructs a validated MachineScopeDeleted model value. */
+export function createMachineScopeDeleted(
+  value: Types.MachineScopeDeleted,
+): Types.MachineScopeDeleted {
+  return modelRuntime.validate(value, "MachineScopeDeleted");
+}
+
+/** Constructs a validated WaitlistEntries model value. */
+export function createWaitlistEntries(value: Types.WaitlistEntries): Types.WaitlistEntries {
+  return modelRuntime.validate(value, "WaitlistEntries");
+}
+
+/** Constructs a validated SCIMDirectoryList model value. */
+export function createSCIMDirectoryList(value: Types.SCIMDirectoryList): Types.SCIMDirectoryList {
+  return modelRuntime.validate(value, "SCIMDirectoryList");
+}
+
+/** Constructs a validated SCIMGroupRoleMappingList model value. */
+export function createSCIMGroupRoleMappingList(
+  value: Types.SCIMGroupRoleMappingList,
+): Types.SCIMGroupRoleMappingList {
+  return modelRuntime.validate(value, "SCIMGroupRoleMappingList");
+}
+
+/** Constructs a validated SCIMGroupRoleMappingDeleted model value. */
+export function createSCIMGroupRoleMappingDeleted(
+  value: Types.SCIMGroupRoleMappingDeleted,
+): Types.SCIMGroupRoleMappingDeleted {
+  return modelRuntime.validate(value, "SCIMGroupRoleMappingDeleted");
+}
+
+/** Constructs a validated DirectoryList model value. */
+export function createDirectoryList(value: Types.DirectoryList): Types.DirectoryList {
+  return modelRuntime.validate(value, "DirectoryList");
+}
+
+/** Constructs a validated DirectoryGroupRoleMappingList model value. */
+export function createDirectoryGroupRoleMappingList(
+  value: Types.DirectoryGroupRoleMappingList,
+): Types.DirectoryGroupRoleMappingList {
+  return modelRuntime.validate(value, "DirectoryGroupRoleMappingList");
+}
+
+/** Constructs a validated DirectoryGroupRoleMappingDeleted model value. */
+export function createDirectoryGroupRoleMappingDeleted(
+  value: Types.DirectoryGroupRoleMappingDeleted,
+): Types.DirectoryGroupRoleMappingDeleted {
+  return modelRuntime.validate(value, "DirectoryGroupRoleMappingDeleted");
 }
 
 /** Constructs a validated JWKSKeysItem model value. */

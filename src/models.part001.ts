@@ -152,7 +152,7 @@ export function createExternalAccountWithVerification(
 export function createSAMLAccountConnection(
   value: Types.SAMLAccountConnection,
 ): Types.SAMLAccountConnection {
-  return modelRuntime.validate(value, "SAMLAccountConnection");
+  return modelRuntime.validate({ ...value }, "SAMLAccountConnection");
 }
 
 /** Constructs a validated SAMLAccount model value. */
@@ -164,7 +164,7 @@ export function createSAMLAccount(value: Types.SAMLAccount): Types.SAMLAccount {
 export function createEnterpriseAccountConnection(
   value: Types.EnterpriseAccountConnection,
 ): Types.EnterpriseAccountConnection {
-  return modelRuntime.validate(value, "EnterpriseAccountConnection");
+  return modelRuntime.validate({ ...value }, "EnterpriseAccountConnection");
 }
 
 /** Constructs a validated EnterpriseAccount model value. */
