@@ -142,4 +142,50 @@ export interface DirectoryGroupRoleMapping {
   updatedAt: number;
 }
 
+/**
+ * Typed representation of the `DirectoryGroupRoleMappingDeleted` API schema.
+ */
+export interface DirectoryGroupRoleMappingDeleted {
+  /**
+   * String representing the object's type.
+   */
+  object: "directory_group_role_mapping" | (string & {});
+  /**
+   * The ID of the deleted directory group role mapping.
+   */
+  id: string;
+  /**
+   * Whether the directory group role mapping was successfully deleted.
+   */
+  deleted: boolean;
+}
+
+/**
+ * Typed representation of the `DirectoryGroupRoleMappingList` API schema.
+ */
+export interface DirectoryGroupRoleMappingList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: DirectoryGroupRoleMappings;
+  /**
+   * Total number of directory group role mappings in the directory.
+   */
+  totalCount: number;
+}
+
 export type DirectoryGroupRoleMappings = DirectoryGroupRoleMapping[];
+
+/**
+ * Typed representation of the `DirectoryList` API schema.
+ */
+export interface DirectoryList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: Directories;
+  /**
+   * Total number of directories.
+   */
+  totalCount: number;
+}

@@ -132,6 +132,40 @@ export interface VerificationOtp {
 }
 
 /**
+ * Typed representation of the `VerificationResponse` API schema.
+ */
+export interface VerificationResponse {
+  /**
+   * The type of the verification object.
+   */
+  object?: string;
+  /**
+   * The ID of the verification. Pass this to attempt_verification.
+   */
+  id?: string;
+  /**
+   * The status of the verification (unverified, verified, expired, or failed).
+   */
+  status?: string;
+  /**
+   * The verification strategy (email_code or phone_code).
+   */
+  strategy?: string;
+  /**
+   * The number of attempts made against this verification.
+   */
+  attempts?: number | null;
+  /**
+   * Unix timestamp (milliseconds) at which the code expires.
+   */
+  expireAt?: number | null;
+  /**
+   * The channel the code was sent over (phone numbers only).
+   */
+  channel?: string | null;
+}
+
+/**
  * Typed representation of the `VerificationSaml` API schema.
  */
 export interface VerificationSaml {

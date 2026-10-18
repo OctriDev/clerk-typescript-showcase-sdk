@@ -157,7 +157,73 @@ export interface OrganizationInvitationsWithPublicOrganizationData {
   totalCount: number;
 }
 
-export type OrganizationInvitationWithPublicOrganizationData = unknown & unknown;
+export type OrganizationInvitationWithPublicOrganizationData = {
+  /**
+   * String representing the object's type. Objects of the same type share the same value.
+   */
+  object?: "organization_invitation" | (string & {});
+  /**
+   * Optional `string` value serialized in the `id` wire field.
+   */
+  id?: string;
+  /**
+   * Optional `string` value serialized in the `email_address` wire field.
+   */
+  emailAddress?: string;
+  /**
+   * Optional `string` value serialized in the `role` wire field.
+   */
+  role?: string;
+  /**
+   * Optional `string` value serialized in the `role_name` wire field.
+   */
+  roleName?: string;
+  /**
+   * Optional `string` value serialized in the `organization_id` wire field.
+   */
+  organizationId?: string;
+  /**
+   * Optional `string` value serialized in the `inviter_id` wire field.
+   */
+  inviterId?: string | null;
+  /**
+   * An organization inviter's public user data
+   */
+  publicInviterData?: OrganizationInvitationPublicUserData | null;
+  /**
+   * Optional `string` value serialized in the `status` wire field.
+   */
+  status?: string;
+  /**
+   * Optional object value serialized in the `public_metadata` wire field.
+   */
+  publicMetadata?: { [key: string]: unknown };
+  /**
+   * Optional object value serialized in the `private_metadata` wire field.
+   */
+  privateMetadata?: { [key: string]: unknown };
+  /**
+   * Optional `string` value serialized in the `url` wire field.
+   */
+  url?: string | null;
+  /**
+   * Unix timestamp of expiration.
+   */
+  expiresAt?: number | null;
+  /**
+   * Unix timestamp of creation.
+   */
+  createdAt?: number;
+  /**
+   * Unix timestamp of last update.
+   */
+  updatedAt?: number;
+} & {
+  /**
+   * Optional object value serialized in the `public_organization_data` wire field.
+   */
+  publicOrganizationData?: OrganizationInvitationPublicOrganizationData;
+};
 
 /**
  * A user's membership in an organization

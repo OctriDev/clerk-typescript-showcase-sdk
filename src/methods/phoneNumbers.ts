@@ -4,6 +4,7 @@
 import { PhoneNumber } from "../types/shared-phone";
 import { ClerkErrors } from "../types/shared-clerk";
 import { DeletedObject } from "../types/shared";
+import { VerificationResponse } from "../types/shared-verification";
 import { decodeResponseEnums } from "../response-enum-validation";
 import type { ClientConfig, RequestOptions } from "../client";
 import { encodePathSegment, fromWire, sdkDecode, sdkRequest } from "../client";
@@ -228,66 +229,8 @@ export async function preparePhoneNumberVerification(
   config: ClientConfig,
   { phoneNumberId }: PreparePhoneNumberVerificationParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  /**
-   * The type of the verification object.
-   */
-  object?: string;
-  /**
-   * The ID of the verification. Pass this to attempt_verification.
-   */
-  id?: string;
-  /**
-   * The status of the verification (unverified, verified, expired, or failed).
-   */
-  status?: string;
-  /**
-   * The verification strategy (email_code or phone_code).
-   */
-  strategy?: string;
-  /**
-   * The number of attempts made against this verification.
-   */
-  attempts?: number | null;
-  /**
-   * Unix timestamp (milliseconds) at which the code expires.
-   */
-  expireAt?: number | null;
-  /**
-   * The channel the code was sent over (phone numbers only).
-   */
-  channel?: string | null;
-}> {
-  const _resp = await sdkRequest<{
-    /**
-     * The type of the verification object.
-     */
-    object?: string;
-    /**
-     * The ID of the verification. Pass this to attempt_verification.
-     */
-    id?: string;
-    /**
-     * The status of the verification (unverified, verified, expired, or failed).
-     */
-    status?: string;
-    /**
-     * The verification strategy (email_code or phone_code).
-     */
-    strategy?: string;
-    /**
-     * The number of attempts made against this verification.
-     */
-    attempts?: number | null;
-    /**
-     * Unix timestamp (milliseconds) at which the code expires.
-     */
-    expireAt?: number | null;
-    /**
-     * The channel the code was sent over (phone numbers only).
-     */
-    channel?: string | null;
-  }>({
+): Promise<VerificationResponse> {
+  const _resp = await sdkRequest<VerificationResponse>({
     method: "POST",
     path: `/phone_numbers/${encodePathSegment(phoneNumberId)}/prepare_verification`,
     operationId: "preparePhoneNumberVerification",
@@ -305,37 +248,7 @@ export async function preparePhoneNumberVerification(
   });
   return sdkDecode(
     _resp,
-    () =>
-      fromWire(_resp.data, "PreparePhoneNumberVerification response") as {
-        /**
-         * The type of the verification object.
-         */
-        object?: string;
-        /**
-         * The ID of the verification. Pass this to attempt_verification.
-         */
-        id?: string;
-        /**
-         * The status of the verification (unverified, verified, expired, or failed).
-         */
-        status?: string;
-        /**
-         * The verification strategy (email_code or phone_code).
-         */
-        strategy?: string;
-        /**
-         * The number of attempts made against this verification.
-         */
-        attempts?: number | null;
-        /**
-         * Unix timestamp (milliseconds) at which the code expires.
-         */
-        expireAt?: number | null;
-        /**
-         * The channel the code was sent over (phone numbers only).
-         */
-        channel?: string | null;
-      },
+    () => fromWire(_resp.data, "VerificationResponse") as VerificationResponse,
   );
 }
 
@@ -359,66 +272,8 @@ export async function attemptPhoneNumberVerification(
   config: ClientConfig,
   { phoneNumberId, verificationId, code }: AttemptPhoneNumberVerificationParams,
   requestOptions?: RequestOptions,
-): Promise<{
-  /**
-   * The type of the verification object.
-   */
-  object?: string;
-  /**
-   * The ID of the verification. Pass this to attempt_verification.
-   */
-  id?: string;
-  /**
-   * The status of the verification (unverified, verified, expired, or failed).
-   */
-  status?: string;
-  /**
-   * The verification strategy (email_code or phone_code).
-   */
-  strategy?: string;
-  /**
-   * The number of attempts made against this verification.
-   */
-  attempts?: number | null;
-  /**
-   * Unix timestamp (milliseconds) at which the code expires.
-   */
-  expireAt?: number | null;
-  /**
-   * The channel the code was sent over (phone numbers only).
-   */
-  channel?: string | null;
-}> {
-  const _resp = await sdkRequest<{
-    /**
-     * The type of the verification object.
-     */
-    object?: string;
-    /**
-     * The ID of the verification. Pass this to attempt_verification.
-     */
-    id?: string;
-    /**
-     * The status of the verification (unverified, verified, expired, or failed).
-     */
-    status?: string;
-    /**
-     * The verification strategy (email_code or phone_code).
-     */
-    strategy?: string;
-    /**
-     * The number of attempts made against this verification.
-     */
-    attempts?: number | null;
-    /**
-     * Unix timestamp (milliseconds) at which the code expires.
-     */
-    expireAt?: number | null;
-    /**
-     * The channel the code was sent over (phone numbers only).
-     */
-    channel?: string | null;
-  }>({
+): Promise<VerificationResponse> {
+  const _resp = await sdkRequest<VerificationResponse>({
     method: "POST",
     path: `/phone_numbers/${encodePathSegment(phoneNumberId)}/attempt_verification`,
     operationId: "attemptPhoneNumberVerification",
@@ -441,37 +296,7 @@ export async function attemptPhoneNumberVerification(
   });
   return sdkDecode(
     _resp,
-    () =>
-      fromWire(_resp.data, "AttemptPhoneNumberVerification response") as {
-        /**
-         * The type of the verification object.
-         */
-        object?: string;
-        /**
-         * The ID of the verification. Pass this to attempt_verification.
-         */
-        id?: string;
-        /**
-         * The status of the verification (unverified, verified, expired, or failed).
-         */
-        status?: string;
-        /**
-         * The verification strategy (email_code or phone_code).
-         */
-        strategy?: string;
-        /**
-         * The number of attempts made against this verification.
-         */
-        attempts?: number | null;
-        /**
-         * Unix timestamp (milliseconds) at which the code expires.
-         */
-        expireAt?: number | null;
-        /**
-         * The channel the code was sent over (phone numbers only).
-         */
-        channel?: string | null;
-      },
+    () => fromWire(_resp.data, "VerificationResponse") as VerificationResponse,
   );
 }
 

@@ -1583,11 +1583,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/VerificationResponse",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "VerificationResponse",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -1806,11 +1806,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/VerificationResponse",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "VerificationResponse",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -6950,11 +6950,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/MachineCreated",
           "schemaType": {
-            "type": "any",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "MachineCreated",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -10439,26 +10439,7 @@
             "nullable": false,
             "items": null,
             "mapValue": null,
-            "variants": [
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              },
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              }
-            ]
+            "variants": null
           },
           "bodyShape": "fields",
           "fields": [
@@ -10576,26 +10557,7 @@
             "nullable": false,
             "items": null,
             "mapValue": null,
-            "variants": [
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              },
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              }
-            ]
+            "variants": null
           },
           "hasAuthoredExample": false,
           "authoredExampleSource": "none"
@@ -14136,11 +14098,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/DirectoryGroupRoleMappingDeleted",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "DirectoryGroupRoleMappingDeleted",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -14999,11 +14961,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/MachineDeleted",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "MachineDeleted",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -15150,11 +15112,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/MachineScopeDeleted",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "MachineScopeDeleted",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -16586,11 +16548,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/SCIMGroupRoleMappingDeleted",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "SCIMGroupRoleMappingDeleted",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -20674,11 +20636,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/MachineSecretKey",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "MachineSecretKey",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -22659,26 +22621,7 @@
             "nullable": false,
             "items": null,
             "mapValue": null,
-            "variants": [
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              },
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              }
-            ]
+            "variants": null
           },
           "hasAuthoredExample": false,
           "authoredExampleSource": "none"
@@ -25506,11 +25449,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/DirectoryList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "DirectoryList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -25628,11 +25571,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/DirectoryGroupRoleMappingList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "DirectoryGroupRoleMappingList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -26691,11 +26634,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/MachineList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "MachineList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -29466,11 +29409,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/SCIMDirectoryList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "SCIMDirectoryList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -29588,11 +29531,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/SCIMGroupRoleMappingList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "SCIMGroupRoleMappingList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -30040,11 +29983,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/BiometricCredentialList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "BiometricCredentialList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -30832,11 +30775,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/TrustedDeviceList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "TrustedDeviceList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -30949,11 +30892,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/WaitlistEntries",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "WaitlistEntries",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -31391,11 +31334,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/VerificationResponse",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "VerificationResponse",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -31559,11 +31502,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/VerificationResponse",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "VerificationResponse",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -33026,11 +32969,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/DirectoryGroupRoleMappingList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "DirectoryGroupRoleMappingList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -33775,8 +33718,8 @@
           "in": "body",
           "required": false,
           "nullable": false,
-          "type": "any",
-          "wireType": null,
+          "type": "ReassignmentMappings",
+          "wireType": "object",
           "declaredValue": null,
           "mediaTypes": ["application/json"]
         },
@@ -33819,8 +33762,8 @@
           "in": "body",
           "required": false,
           "nullable": false,
-          "type": "any",
-          "wireType": null,
+          "type": "ReassignmentMappings",
+          "wireType": "object",
           "declaredValue": null,
           "mediaTypes": ["application/json"]
         }
@@ -33874,11 +33817,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/SCIMGroupRoleMappingList",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "SCIMGroupRoleMappingList",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -35431,11 +35374,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/InvitationRevoked",
           "schemaType": {
-            "type": "any",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "InvitationRevoked",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -36692,11 +36635,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/MachineSecretKey",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "MachineSecretKey",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -40021,11 +39964,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/InstanceSettings",
           "schemaType": {
-            "type": "object",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "InstanceSettings",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -42569,8 +42512,8 @@
           "in": "body",
           "required": false,
           "nullable": true,
-          "type": "any",
-          "wireType": null,
+          "type": "ReassignmentMappings",
+          "wireType": "object",
           "declaredValue": null,
           "mediaTypes": ["application/json"]
         },
@@ -42712,8 +42655,8 @@
           "in": "body",
           "required": false,
           "nullable": true,
-          "type": "any",
-          "wireType": null,
+          "type": "ReassignmentMappings",
+          "wireType": "object",
           "declaredValue": null,
           "mediaTypes": ["application/json"]
         }
@@ -44771,26 +44714,7 @@
             "nullable": false,
             "items": null,
             "mapValue": null,
-            "variants": [
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              },
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              }
-            ]
+            "variants": null
           },
           "hasAuthoredExample": false,
           "authoredExampleSource": "none"
@@ -48590,11 +48514,11 @@
           "statusCode": "200",
           "mediaType": "application/json",
           "decoderKind": "json",
-          "schemaRef": null,
+          "schemaRef": "#/components/schemas/VerifyOAuthAccessTokenResponse",
           "schemaType": {
-            "type": "anyOf",
+            "type": "ref",
             "format": null,
-            "ref": null,
+            "ref": "VerifyOAuthAccessTokenResponse",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -49601,9 +49525,9 @@
         {
           "name": "proration",
           "required": true,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "BillingProrationDiscountDetail",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -49870,9 +49794,9 @@
         {
           "name": "totals",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceTotalsResponse2",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -49930,9 +49854,9 @@
         {
           "name": "annual_monthly_fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -49985,9 +49909,9 @@
         {
           "name": "fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -50359,6 +50283,52 @@
         },
         {
           "name": "updated_at",
+          "required": true,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "BiometricCredentialList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "BiometricCredential",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
           "required": true,
           "type": "integer",
           "format": "int64",
@@ -50834,9 +50804,9 @@
         {
           "name": "balance",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -50976,9 +50946,9 @@
         {
           "name": "payer",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommercePayerCreditResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -50987,9 +50957,9 @@
         {
           "name": "proration",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceProrationCreditDetailResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -51025,9 +50995,9 @@
         {
           "name": "amount",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -51036,9 +51006,9 @@
         {
           "name": "amount_off",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -51217,9 +51187,9 @@
         {
           "name": "proration",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceProrationDiscountResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -52289,9 +52259,9 @@
         {
           "name": "annual_fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -52300,9 +52270,9 @@
         {
           "name": "annual_monthly_fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -52352,9 +52322,9 @@
         {
           "name": "fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -52574,9 +52544,9 @@
         {
           "name": "annual_fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -52607,9 +52577,9 @@
         {
           "name": "annual_monthly_fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -52681,9 +52651,9 @@
         {
           "name": "fee",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53020,9 +52990,9 @@
         {
           "name": "immediate_charge",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53427,9 +53397,9 @@
         {
           "name": "amount",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53498,9 +53468,9 @@
         {
           "name": "credits",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceCreditsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53564,9 +53534,9 @@
         {
           "name": "next_payment",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceSubscriptionItemNextPaymentResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53652,9 +53622,9 @@
         {
           "name": "plan",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommercePlan",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53707,9 +53677,9 @@
         {
           "name": "seats",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceSubscriptionItemSeatsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53729,9 +53699,9 @@
         {
           "name": "totals",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceTotalsResponse2",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53767,9 +53737,9 @@
         {
           "name": "amount",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53800,9 +53770,9 @@
         {
           "name": "credit",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceSubscriptionCreditResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53855,9 +53825,9 @@
         {
           "name": "lifetime_paid",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53866,9 +53836,9 @@
         {
           "name": "next_invoice",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceSubscriptionItemNextPaymentResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53877,9 +53847,9 @@
         {
           "name": "next_payment",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceSubscriptionItemNextPaymentResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53910,9 +53880,9 @@
         {
           "name": "payer",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommercePayerResponse2",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53932,9 +53902,9 @@
         {
           "name": "payment_source",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommercePaymentSourceResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -53976,9 +53946,9 @@
         {
           "name": "plan",
           "required": true,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommercePlan2",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54069,9 +54039,9 @@
         {
           "name": "amount",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceMoneyResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54110,9 +54080,9 @@
         {
           "name": "totals",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceTotalsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54224,9 +54194,9 @@
         {
           "name": "totals",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceTotalsResponse2",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54262,9 +54232,9 @@
         {
           "name": "credits",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceCreditsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54273,9 +54243,9 @@
         {
           "name": "discounts",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceDiscountsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54363,9 +54333,9 @@
         {
           "name": "credits",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "CommerceCreditsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54374,9 +54344,9 @@
         {
           "name": "discounts",
           "required": false,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "BillingDiscountsResponse",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -54983,6 +54953,93 @@
       "values": []
     },
     {
+      "name": "DirectoryGroupRoleMappingDeleted",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "deleted",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "DirectoryGroupRoleMappingList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "DirectoryGroupRoleMappings",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
+          "required": true,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "DirectoryGroupRoleMappings",
       "kind": "array",
       "type": {
@@ -55003,6 +55060,44 @@
         "variants": null
       },
       "properties": [],
+      "values": []
+    },
+    {
+      "name": "DirectoryList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "Directories",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
+          "required": true,
+          "type": "integer",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
       "values": []
     },
     {
@@ -55582,26 +55677,7 @@
               "nullable": false,
               "items": null,
               "mapValue": null,
-              "variants": [
-                {
-                  "type": "any",
-                  "format": null,
-                  "ref": null,
-                  "nullable": false,
-                  "items": null,
-                  "mapValue": null,
-                  "variants": null
-                },
-                {
-                  "type": "any",
-                  "format": null,
-                  "ref": null,
-                  "nullable": false,
-                  "items": null,
-                  "mapValue": null,
-                  "variants": null
-                }
-              ]
+              "variants": null
             }
           ]
         },
@@ -55767,26 +55843,7 @@
         "nullable": false,
         "items": null,
         "mapValue": null,
-        "variants": [
-          {
-            "type": "any",
-            "format": null,
-            "ref": null,
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          {
-            "type": "any",
-            "format": null,
-            "ref": null,
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          }
-        ]
+        "variants": null
       },
       "properties": [
         {
@@ -57263,10 +57320,218 @@
       "values": []
     },
     {
+      "name": "InstanceSettings",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "enhanced_email_deliverability",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "from_email_address",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "progressive_sign_up",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "restricted_to_allowlist",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "Invitation",
       "kind": "object",
       "type": {
         "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "created_at",
+          "required": true,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "email_address",
+          "required": true,
+          "type": "string",
+          "format": "email",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expires_at",
+          "required": false,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "public_metadata",
+          "required": true,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "revoked",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "updated_at",
+          "required": true,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "url",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "InvitationRevoked",
+      "kind": "object",
+      "type": {
+        "type": "any",
         "format": null,
         "ref": null,
         "nullable": false,
@@ -58842,6 +59107,128 @@
       "values": []
     },
     {
+      "name": "MachineCreated",
+      "kind": "object",
+      "type": {
+        "type": "any",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "secret_key",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MachineDeleted",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "deleted",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MachineList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "Machine",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
+          "required": true,
+          "type": "integer",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "MachineScope",
       "kind": "object",
       "type": {
@@ -58889,6 +59276,104 @@
         },
         {
           "name": "to_machine_id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MachineScopeDeleted",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "deleted",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "from_machine_id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "to_machine_id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MachineSecretKey",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "object",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "secret",
           "required": true,
           "type": "string",
           "format": null,
@@ -60066,9 +60551,9 @@
         {
           "name": "affiliation_verification",
           "required": true,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "OrganizationDomainVerification",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -60143,9 +60628,9 @@
         {
           "name": "ownership_verification",
           "required": true,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "OrganizationDomainVerification",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -60154,9 +60639,9 @@
         {
           "name": "public_organization_data",
           "required": false,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "OrganizationInvitationPublicOrganizationData",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -60198,9 +60683,9 @@
         {
           "name": "verification",
           "required": true,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "OrganizationDomainVerification",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -60993,9 +61478,9 @@
         {
           "name": "organization",
           "required": true,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "Organization",
           "nullable": false,
           "items": null,
           "mapValue": null,
@@ -62972,9 +63457,9 @@
         {
           "name": "creator_role",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "RoleSetItem",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -62983,9 +63468,9 @@
         {
           "name": "default_role",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "RoleSetItem",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -63049,9 +63534,9 @@
         {
           "name": "role_set_migration",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "RoleSetMigration",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -63580,26 +64065,7 @@
               "nullable": false,
               "items": null,
               "mapValue": null,
-              "variants": [
-                {
-                  "type": "any",
-                  "format": null,
-                  "ref": null,
-                  "nullable": false,
-                  "items": null,
-                  "mapValue": null,
-                  "variants": null
-                },
-                {
-                  "type": "any",
-                  "format": null,
-                  "ref": null,
-                  "nullable": false,
-                  "items": null,
-                  "mapValue": null,
-                  "variants": null
-                }
-              ]
+              "variants": null
             }
           ]
         },
@@ -63646,26 +64112,7 @@
         "nullable": false,
         "items": null,
         "mapValue": null,
-        "variants": [
-          {
-            "type": "any",
-            "format": null,
-            "ref": null,
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          {
-            "type": "any",
-            "format": null,
-            "ref": null,
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          }
-        ]
+        "variants": null
       },
       "properties": [
         {
@@ -63855,26 +64302,7 @@
         "nullable": false,
         "items": null,
         "mapValue": null,
-        "variants": [
-          {
-            "type": "any",
-            "format": null,
-            "ref": null,
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          {
-            "type": "any",
-            "format": null,
-            "ref": null,
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          }
-        ]
+        "variants": null
       },
       "properties": [
         {
@@ -64362,26 +64790,7 @@
             "nullable": false,
             "items": null,
             "mapValue": null,
-            "variants": [
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              },
-              {
-                "type": "any",
-                "format": null,
-                "ref": null,
-                "nullable": false,
-                "items": null,
-                "mapValue": null,
-                "variants": null
-              }
-            ]
+            "variants": null
           },
           "mapValue": null,
           "variants": null
@@ -64599,6 +65008,44 @@
       "values": []
     },
     {
+      "name": "SCIMDirectoryList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "SCIMDirectories",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
+          "required": true,
+          "type": "integer",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "SCIMGroupRoleMapping",
       "kind": "object",
       "type": {
@@ -64734,6 +65181,93 @@
         },
         {
           "name": "updated_at",
+          "required": true,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "SCIMGroupRoleMappingDeleted",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "deleted",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "SCIMGroupRoleMappingList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "SCIMGroupRoleMappings",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
           "required": true,
           "type": "integer",
           "format": "int64",
@@ -66552,6 +67086,52 @@
       "values": []
     },
     {
+      "name": "TrustedDeviceList",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "TrustedDevice",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
+          "required": true,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "User",
       "kind": "object",
       "type": {
@@ -66674,9 +67254,9 @@
         {
           "name": "directory",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "SCIMUserMetadata",
           "nullable": false,
           "items": null,
           "mapValue": null,
@@ -67071,9 +67651,9 @@
         {
           "name": "scim",
           "required": false,
-          "type": "any",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "SCIMUserMetadata",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -67860,6 +68440,99 @@
       "values": []
     },
     {
+      "name": "VerificationResponse",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "attempts",
+          "required": false,
+          "type": "integer",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "channel",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expire_at",
+          "required": false,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "object",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "strategy",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "VerificationSaml",
       "kind": "object",
       "type": {
@@ -68231,6 +68904,86 @@
       "values": []
     },
     {
+      "name": "VerifyOAuthAccessTokenResponse",
+      "kind": "union",
+      "type": {
+        "type": "anyOf",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": [
+          {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          }
+        ]
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "WaitlistEntries",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "WaitlistEntry",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "total_count",
+          "required": true,
+          "type": "integer",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
       "name": "WaitlistEntry",
       "kind": "object",
       "type": {
@@ -68279,9 +69032,9 @@
         {
           "name": "invitation",
           "required": false,
-          "type": "object",
+          "type": "ref",
           "format": null,
-          "ref": null,
+          "ref": "Invitation",
           "nullable": true,
           "items": null,
           "mapValue": null,
@@ -74049,11 +74802,11 @@
           },
           {
             "name": "fee",
-            "description": "Required API value serialized in the `fee` wire field."
+            "description": "Required object value serialized in the `fee` wire field."
           },
           {
             "name": "annual_monthly_fee",
-            "description": "Required API value serialized in the `annual_monthly_fee` wire field."
+            "description": "Required object value serialized in the `annual_monthly_fee` wire field."
           },
           {
             "name": "description",
@@ -74186,6 +74939,22 @@
           {
             "name": "revoked_at",
             "description": "Unix timestamp of revocation in milliseconds."
+          }
+        ]
+      },
+      {
+        "name": "BiometricCredentialList",
+        "kind": "model",
+        "description": "Typed representation of the `BiometricCredentialList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of biometric credentials"
           }
         ]
       },
@@ -74417,11 +75186,11 @@
         "properties": [
           {
             "name": "proration",
-            "description": "Required API value serialized in the `proration` wire field."
+            "description": "Required object value serialized in the `proration` wire field."
           },
           {
             "name": "payer",
-            "description": "Required API value serialized in the `payer` wire field."
+            "description": "Required object value serialized in the `payer` wire field."
           },
           {
             "name": "total",
@@ -74509,7 +75278,7 @@
         "properties": [
           {
             "name": "proration",
-            "description": "Required API value serialized in the `proration` wire field."
+            "description": "Required object value serialized in the `proration` wire field."
           },
           {
             "name": "total",
@@ -74929,15 +75698,15 @@
           },
           {
             "name": "fee",
-            "description": "Required API value serialized in the `fee` wire field."
+            "description": "Required object value serialized in the `fee` wire field."
           },
           {
             "name": "annual_monthly_fee",
-            "description": "Required API value serialized in the `annual_monthly_fee` wire field."
+            "description": "Required object value serialized in the `annual_monthly_fee` wire field."
           },
           {
             "name": "annual_fee",
-            "description": "Required API value serialized in the `annual_fee` wire field."
+            "description": "Required object value serialized in the `annual_fee` wire field."
           },
           {
             "name": "description",
@@ -75013,15 +75782,15 @@
           },
           {
             "name": "fee",
-            "description": "Required API value serialized in the `fee` wire field."
+            "description": "Required object value serialized in the `fee` wire field."
           },
           {
             "name": "annual_monthly_fee",
-            "description": "Required API value serialized in the `annual_monthly_fee` wire field."
+            "description": "Required object value serialized in the `annual_monthly_fee` wire field."
           },
           {
             "name": "annual_fee",
-            "description": "Required API value serialized in the `annual_fee` wire field."
+            "description": "Required object value serialized in the `annual_fee` wire field."
           },
           {
             "name": "amount",
@@ -75657,11 +76426,11 @@
           },
           {
             "name": "credits",
-            "description": "Optional API value serialized in the `credits` wire field."
+            "description": "Optional object value serialized in the `credits` wire field."
           },
           {
             "name": "discounts",
-            "description": "Optional API value serialized in the `discounts` wire field."
+            "description": "Optional object value serialized in the `discounts` wire field."
           }
         ]
       },
@@ -75693,7 +76462,7 @@
           },
           {
             "name": "credits",
-            "description": "Optional API value serialized in the `credits` wire field."
+            "description": "Optional object value serialized in the `credits` wire field."
           },
           {
             "name": "discounts",
@@ -75901,11 +76670,63 @@
         ]
       },
       {
+        "name": "DirectoryGroupRoleMappingDeleted",
+        "kind": "model",
+        "description": "Typed representation of the `DirectoryGroupRoleMappingDeleted` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "String representing the object's type."
+          },
+          {
+            "name": "id",
+            "description": "The ID of the deleted directory group role mapping."
+          },
+          {
+            "name": "deleted",
+            "description": "Whether the directory group role mapping was successfully deleted."
+          }
+        ]
+      },
+      {
+        "name": "DirectoryGroupRoleMappingList",
+        "kind": "model",
+        "description": "Typed representation of the `DirectoryGroupRoleMappingList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of directory group role mappings in the directory."
+          }
+        ]
+      },
+      {
         "name": "DirectoryGroupRoleMappings",
         "kind": "model",
         "description": "Typed representation of the `DirectoryGroupRoleMappings` API schema.",
         "values": [],
         "properties": []
+      },
+      {
+        "name": "DirectoryList",
+        "kind": "model",
+        "description": "Typed representation of the `DirectoryList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of directories."
+          }
+        ]
       },
       {
         "name": "DNSTarget",
@@ -76641,6 +77462,38 @@
         ]
       },
       {
+        "name": "InstanceSettings",
+        "kind": "model",
+        "description": "Typed representation of the `InstanceSettings` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "String representing the object's type. Objects of the same type share the same value."
+          },
+          {
+            "name": "id",
+            "description": "Optional `string` value serialized in the `id` wire field."
+          },
+          {
+            "name": "restricted_to_allowlist",
+            "description": "Optional `boolean` value serialized in the `restricted_to_allowlist` wire field."
+          },
+          {
+            "name": "from_email_address",
+            "description": "Optional `string` value serialized in the `from_email_address` wire field."
+          },
+          {
+            "name": "progressive_sign_up",
+            "description": "Optional `boolean` value serialized in the `progressive_sign_up` wire field."
+          },
+          {
+            "name": "enhanced_email_deliverability",
+            "description": "Deprecated. This setting is retired and no longer affects email delivery; all email is sent through the instance's configured email sending domain. The field is preserved for API compatibility only and will be removed in a future version."
+          }
+        ]
+      },
+      {
         "name": "Invitation",
         "kind": "model",
         "description": "Typed representation of the `Invitation` API schema.",
@@ -76687,6 +77540,13 @@
             "description": "Unix timestamp of last update."
           }
         ]
+      },
+      {
+        "name": "InvitationRevoked",
+        "kind": "model",
+        "description": "Typed representation of the `InvitationRevoked` API schema.",
+        "values": [],
+        "properties": []
       },
       {
         "name": "JWKS",
@@ -77135,6 +77995,49 @@
         "properties": []
       },
       {
+        "name": "MachineCreated",
+        "kind": "model",
+        "description": "Typed representation of the `MachineCreated` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "MachineDeleted",
+        "kind": "model",
+        "description": "Typed representation of the `MachineDeleted` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "String representing the object's type."
+          },
+          {
+            "name": "id",
+            "description": "The ID of the deleted machine"
+          },
+          {
+            "name": "deleted",
+            "description": "Whether the machine was successfully deleted"
+          }
+        ]
+      },
+      {
+        "name": "MachineList",
+        "kind": "model",
+        "description": "Typed representation of the `MachineList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of machines"
+          }
+        ]
+      },
+      {
         "name": "MachineScope",
         "kind": "model",
         "description": "Typed representation of the `MachineScope` API schema.",
@@ -77155,6 +78058,46 @@
           {
             "name": "created_at",
             "description": "Unix timestamp of creation."
+          }
+        ]
+      },
+      {
+        "name": "MachineScopeDeleted",
+        "kind": "model",
+        "description": "Typed representation of the `MachineScopeDeleted` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "String representing the object's type."
+          },
+          {
+            "name": "from_machine_id",
+            "description": "The ID of the machine that had access to the target machine"
+          },
+          {
+            "name": "to_machine_id",
+            "description": "The ID of the machine that was being accessed"
+          },
+          {
+            "name": "deleted",
+            "description": "Whether the machine scope was successfully deleted"
+          }
+        ]
+      },
+      {
+        "name": "MachineSecretKey",
+        "kind": "model",
+        "description": "Typed representation of the `MachineSecretKey` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "String representing the object's type."
+          },
+          {
+            "name": "secret",
+            "description": "The secret key for the machine."
           }
         ]
       },
@@ -78930,6 +79873,22 @@
         ]
       },
       {
+        "name": "SCIMDirectoryList",
+        "kind": "model",
+        "description": "Typed representation of the `SCIMDirectoryList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of directories."
+          }
+        ]
+      },
+      {
         "name": "SCIMGroupRoleMapping",
         "kind": "model",
         "description": "A mapping from a SCIM group to an organization role. Members of the group are assigned the role; the lowest-precedence match wins when a user belongs to multiple mapped groups.",
@@ -78982,6 +79941,42 @@
           {
             "name": "updated_at",
             "description": "Unix timestamp (milliseconds) of when the mapping was last updated."
+          }
+        ]
+      },
+      {
+        "name": "SCIMGroupRoleMappingDeleted",
+        "kind": "model",
+        "description": "Typed representation of the `SCIMGroupRoleMappingDeleted` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "String representing the object's type."
+          },
+          {
+            "name": "id",
+            "description": "The ID of the deleted SCIM group role mapping."
+          },
+          {
+            "name": "deleted",
+            "description": "Whether the SCIM group role mapping was successfully deleted."
+          }
+        ]
+      },
+      {
+        "name": "SCIMGroupRoleMappingList",
+        "kind": "model",
+        "description": "Typed representation of the `SCIMGroupRoleMappingList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of SCIM group role mappings in the directory."
           }
         ]
       },
@@ -79643,6 +80638,22 @@
         ]
       },
       {
+        "name": "TrustedDeviceList",
+        "kind": "model",
+        "description": "Typed representation of the `TrustedDeviceList` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of trusted devices"
+          }
+        ]
+      },
+      {
         "name": "User",
         "kind": "model",
         "description": "Typed representation of the `User` API schema.",
@@ -80099,6 +81110,42 @@
         ]
       },
       {
+        "name": "VerificationResponse",
+        "kind": "model",
+        "description": "Typed representation of the `VerificationResponse` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "object",
+            "description": "The type of the verification object."
+          },
+          {
+            "name": "id",
+            "description": "The ID of the verification. Pass this to attempt_verification."
+          },
+          {
+            "name": "status",
+            "description": "The status of the verification (unverified, verified, expired, or failed)."
+          },
+          {
+            "name": "strategy",
+            "description": "The verification strategy (email_code or phone_code)."
+          },
+          {
+            "name": "attempts",
+            "description": "The number of attempts made against this verification."
+          },
+          {
+            "name": "expire_at",
+            "description": "Unix timestamp (milliseconds) at which the code expires."
+          },
+          {
+            "name": "channel",
+            "description": "The channel the code was sent over (phone numbers only)."
+          }
+        ]
+      },
+      {
         "name": "VerificationSaml",
         "kind": "model",
         "description": "Typed representation of the `VerificationSaml` API schema.",
@@ -80235,6 +81282,29 @@
           {
             "name": "verified_at_client",
             "description": "Optional `string` value serialized in the `verified_at_client` wire field."
+          }
+        ]
+      },
+      {
+        "name": "VerifyOAuthAccessTokenResponse",
+        "kind": "model",
+        "description": "Typed representation of the `VerifyOAuthAccessTokenResponse` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "WaitlistEntries",
+        "kind": "model",
+        "description": "Typed representation of the `WaitlistEntries` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "data",
+            "description": "Required array value serialized in the `data` wire field."
+          },
+          {
+            "name": "total_count",
+            "description": "Total number of waitlist entries"
           }
         ]
       },

@@ -36,11 +36,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     required: ["proration", "total"],
     nullableRequired: ["proration"],
     properties: {
-      proration: {
-        type: "object",
-        nullable: true,
-        allOf: [{ ref: "BillingProrationDiscountDetail" }],
-      },
+      proration: { ref: "BillingProrationDiscountDetail", nullable: true },
       total: { ref: "CommerceMoneyResponse" },
     },
   },
@@ -72,7 +68,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       payer: { ref: "CommercePayerResponse" },
       amount: { ref: "CommerceMoneyResponse" },
-      totals: { nullable: true, allOf: [{ ref: "CommerceTotalsResponse2" }] },
+      totals: { ref: "CommerceTotalsResponse2", nullable: true },
       payment_method: { ref: "CommercePaymentMethodResponse" },
     },
   },
@@ -95,8 +91,8 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     ],
     nullableRequired: ["fee", "annual_monthly_fee"],
     properties: {
-      fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      annual_monthly_fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
+      fee: { ref: "CommerceMoneyResponse", nullable: true },
+      annual_monthly_fee: { ref: "CommerceMoneyResponse", nullable: true },
     },
   },
   BillingProrationDiscountDetail: {
@@ -142,6 +138,11 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "updated_at",
     ],
   },
+  BiometricCredentialList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { type: "array", items: { ref: "BiometricCredential" } } },
+  },
   BlocklistIdentifiers: { type: "object", required: ["data", "total_count"] },
   CNameTarget: { type: "object", required: ["host", "value", "required"] },
   ClerkError: { type: "object", required: ["message", "long_message", "code"] },
@@ -176,7 +177,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     type: "object",
     required: ["object", "balance"],
     nullableRequired: ["balance"],
-    properties: { balance: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] } },
+    properties: { balance: { ref: "CommerceMoneyResponse", nullable: true } },
   },
   CommerceCreditLedgerResponse: {
     type: "object",
@@ -188,8 +189,8 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     required: ["proration", "payer", "total"],
     nullableRequired: ["proration", "payer"],
     properties: {
-      proration: { nullable: true, allOf: [{ ref: "CommerceProrationCreditDetailResponse" }] },
-      payer: { nullable: true, allOf: [{ ref: "CommercePayerCreditResponse" }] },
+      proration: { ref: "CommerceProrationCreditDetailResponse", nullable: true },
+      payer: { ref: "CommercePayerCreditResponse", nullable: true },
       total: { ref: "CommerceMoneyResponse" },
     },
   },
@@ -208,8 +209,8 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     ],
     nullableRequired: ["cycles_remaining", "redeemed_by"],
     properties: {
-      amount_off: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      amount: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
+      amount_off: { ref: "CommerceMoneyResponse", nullable: true },
+      amount: { ref: "CommerceMoneyResponse", nullable: true },
     },
   },
   CommerceDiscountsResponse: {
@@ -217,7 +218,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     required: ["proration", "total"],
     nullableRequired: ["proration"],
     properties: {
-      proration: { nullable: true, allOf: [{ ref: "CommerceProrationDiscountResponse" }] },
+      proration: { ref: "CommerceProrationDiscountResponse", nullable: true },
       total: { ref: "CommerceMoneyResponse" },
     },
   },
@@ -342,9 +343,9 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "free_trial_days",
     ],
     properties: {
-      fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      annual_monthly_fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      annual_fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
+      fee: { ref: "CommerceMoneyResponse", nullable: true },
+      annual_monthly_fee: { ref: "CommerceMoneyResponse", nullable: true },
+      annual_fee: { ref: "CommerceMoneyResponse", nullable: true },
       features: { type: "array", items: { ref: "FeatureResponse" } },
       unit_prices: { type: "array", items: { ref: "CommercePlanUnitPrice" } },
     },
@@ -380,9 +381,9 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     ],
     nullableRequired: ["fee", "annual_monthly_fee", "annual_fee"],
     properties: {
-      fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      annual_monthly_fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      annual_fee: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
+      fee: { ref: "CommerceMoneyResponse", nullable: true },
+      annual_monthly_fee: { ref: "CommerceMoneyResponse", nullable: true },
+      annual_fee: { ref: "CommerceMoneyResponse", nullable: true },
       features: { type: "array", items: { ref: "FeatureResponse2" } },
     },
   },
@@ -410,7 +411,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       previous_plan: { ref: "CommercePlan2" },
       previous_price: { ref: "BillingPriceResponse" },
-      immediate_charge: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
+      immediate_charge: { ref: "CommerceMoneyResponse", nullable: true },
     },
   },
   CommercePriceTransitionResponse: {
@@ -453,7 +454,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
   },
   CommerceSubscriptionCreditResponse: {
     type: "object",
-    properties: { amount: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] } },
+    properties: { amount: { ref: "CommerceMoneyResponse", nullable: true } },
   },
   CommerceSubscriptionItem: {
     type: "object",
@@ -475,17 +476,14 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     nullableRequired: ["plan_id", "period_end", "canceled_at", "past_due_at", "ended_at"],
     properties: {
       credit: { ref: "CommerceSubscriptionCreditResponse" },
-      credits: { nullable: true, allOf: [{ ref: "CommerceCreditsResponse" }] },
-      plan: { nullable: true, allOf: [{ ref: "CommercePlan" }] },
+      credits: { ref: "CommerceCreditsResponse", nullable: true },
+      plan: { ref: "CommercePlan", nullable: true },
       payment_method: { ref: "CommercePaymentMethodResponse" },
       lifetime_paid: { ref: "CommerceMoneyResponse" },
-      next_payment: {
-        nullable: true,
-        allOf: [{ ref: "CommerceSubscriptionItemNextPaymentResponse" }],
-      },
+      next_payment: { ref: "CommerceSubscriptionItemNextPaymentResponse", nullable: true },
       payer: { ref: "CommercePayerResponse" },
-      seats: { nullable: true, allOf: [{ ref: "CommerceSubscriptionItemSeatsResponse" }] },
-      totals: { nullable: true, allOf: [{ ref: "CommerceTotalsResponse2" }] },
+      seats: { ref: "CommerceSubscriptionItemSeatsResponse", nullable: true },
+      totals: { ref: "CommerceTotalsResponse2", nullable: true },
     },
   },
   CommerceSubscriptionItem2: {
@@ -507,28 +505,22 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     ],
     nullableRequired: ["plan"],
     properties: {
-      credit: { nullable: true, allOf: [{ ref: "CommerceSubscriptionCreditResponse" }] },
-      plan: { nullable: true, allOf: [{ ref: "CommercePlan2" }] },
-      payment_source: { nullable: true, allOf: [{ ref: "CommercePaymentSourceResponse" }] },
-      lifetime_paid: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      amount: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
-      next_invoice: {
-        nullable: true,
-        allOf: [{ ref: "CommerceSubscriptionItemNextPaymentResponse" }],
-      },
-      next_payment: {
-        nullable: true,
-        allOf: [{ ref: "CommerceSubscriptionItemNextPaymentResponse" }],
-      },
-      payer: { nullable: true, allOf: [{ ref: "CommercePayerResponse2" }] },
+      credit: { ref: "CommerceSubscriptionCreditResponse", nullable: true },
+      plan: { ref: "CommercePlan2", nullable: true },
+      payment_source: { ref: "CommercePaymentSourceResponse", nullable: true },
+      lifetime_paid: { ref: "CommerceMoneyResponse", nullable: true },
+      amount: { ref: "CommerceMoneyResponse", nullable: true },
+      next_invoice: { ref: "CommerceSubscriptionItemNextPaymentResponse", nullable: true },
+      next_payment: { ref: "CommerceSubscriptionItemNextPaymentResponse", nullable: true },
+      payer: { ref: "CommercePayerResponse2", nullable: true },
     },
   },
   CommerceSubscriptionItemNextPaymentResponse: {
     type: "object",
     properties: {
-      amount: { nullable: true, allOf: [{ ref: "CommerceMoneyResponse" }] },
+      amount: { ref: "CommerceMoneyResponse", nullable: true },
       per_unit_totals: { type: "array", items: { ref: "CommercePerUnitTotal" } },
-      totals: { nullable: true, allOf: [{ ref: "CommerceTotalsResponse" }] },
+      totals: { ref: "CommerceTotalsResponse", nullable: true },
     },
   },
   CommerceSubscriptionItemSeatsResponse: {
@@ -543,7 +535,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       amount: { ref: "CommerceMoneyResponse" },
       per_unit_totals: { type: "array", items: { ref: "CommercePerUnitTotal2" } },
-      totals: { nullable: true, allOf: [{ ref: "CommerceTotalsResponse2" }] },
+      totals: { ref: "CommerceTotalsResponse2", nullable: true },
     },
   },
   CommerceTotalsResponse: {
@@ -555,8 +547,8 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       tax_total: { ref: "CommerceMoneyResponse" },
       grand_total: { ref: "CommerceMoneyResponse" },
       per_unit_totals: { type: "array", items: { ref: "CommercePerUnitTotal" } },
-      credits: { nullable: true, allOf: [{ ref: "CommerceCreditsResponse" }] },
-      discounts: { nullable: true, allOf: [{ ref: "CommerceDiscountsResponse" }] },
+      credits: { ref: "CommerceCreditsResponse", nullable: true },
+      discounts: { ref: "CommerceDiscountsResponse", nullable: true },
     },
   },
   CommerceTotalsResponse2: {
@@ -568,8 +560,8 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       tax_total: { ref: "CommerceMoneyResponse" },
       grand_total: { ref: "CommerceMoneyResponse" },
       per_unit_totals: { type: "array", items: { ref: "CommercePerUnitTotal2" } },
-      credits: { nullable: true, allOf: [{ ref: "CommerceCreditsResponse" }] },
-      discounts: { type: "object", nullable: true, allOf: [{ ref: "BillingDiscountsResponse" }] },
+      credits: { ref: "CommerceCreditsResponse", nullable: true },
+      discounts: { ref: "BillingDiscountsResponse", nullable: true },
     },
   },
   Cookies: {
@@ -617,7 +609,18 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     ],
     properties: { role: { ref: "Role" } },
   },
+  DirectoryGroupRoleMappingDeleted: { type: "object", required: ["object", "id", "deleted"] },
+  DirectoryGroupRoleMappingList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { ref: "DirectoryGroupRoleMappings" } },
+  },
   DirectoryGroupRoleMappings: { type: "array", items: { ref: "DirectoryGroupRoleMapping" } },
+  DirectoryList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { ref: "Directories" } },
+  },
   Domain: {
     type: "object",
     required: ["object", "id", "name", "is_satellite", "frontend_api_url", "development_origin"],
@@ -703,7 +706,6 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "updated_at",
     ],
     nullableRequired: ["logo_public_url"],
-    anyOf: [{ required: ["domain"] }, { required: ["domains"] }],
   },
   EnterpriseAccountVerification: {
     type: "object",
@@ -842,6 +844,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "updated_at",
     ],
   },
+  InvitationRevoked: { allOf: [{ ref: "Invitation" }] },
   JWKS: { type: "object", properties: { keys: { type: "array", items: { ref: "JWKSKeysItem" } } } },
   JWKSEcdsaPrivateKey: {
     type: "object",
@@ -897,10 +900,22 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       },
     ],
   },
+  MachineCreated: { allOf: [{ ref: "Machine" }, { type: "object", required: ["secret_key"] }] },
+  MachineDeleted: { type: "object", required: ["object", "id", "deleted"] },
+  MachineList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { type: "array", items: { ref: "Machine" } } },
+  },
   MachineScope: {
     type: "object",
     required: ["object", "from_machine_id", "to_machine_id", "created_at"],
   },
+  MachineScopeDeleted: {
+    type: "object",
+    required: ["object", "from_machine_id", "to_machine_id", "deleted"],
+  },
+  MachineSecretKey: { type: "object", required: ["object", "secret"] },
   MachineWithoutScopedMachines: {
     type: "object",
     required: ["object", "id", "name", "instance_id", "created_at", "updated_at"],
@@ -1013,25 +1028,12 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "verification",
     ],
     properties: {
-      affiliation_verification: {
-        type: "object",
-        nullable: true,
-        allOf: [{ ref: "OrganizationDomainVerification" }],
-      },
-      ownership_verification: {
-        type: "object",
-        nullable: true,
-        allOf: [{ ref: "OrganizationDomainVerification" }],
-      },
-      verification: {
-        type: "object",
-        nullable: true,
-        allOf: [{ ref: "OrganizationDomainVerification" }],
-      },
+      affiliation_verification: { ref: "OrganizationDomainVerification", nullable: true },
+      ownership_verification: { ref: "OrganizationDomainVerification", nullable: true },
+      verification: { ref: "OrganizationDomainVerification", nullable: true },
       public_organization_data: {
-        type: "object",
+        ref: "OrganizationInvitationPublicOrganizationData",
         nullable: true,
-        allOf: [{ ref: "OrganizationInvitationPublicOrganizationData" }],
       },
     },
   },
@@ -1095,11 +1097,13 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     nullableRequired: ["url", "expires_at", "inviter_id", "public_inviter_data"],
     allOf: [
       {
+        type: "object",
         properties: {
           public_inviter_data: { ref: "OrganizationInvitationPublicUserData", nullable: true },
         },
       },
       {
+        type: "object",
         properties: {
           public_organization_data: { ref: "OrganizationInvitationPublicOrganizationData" },
         },
@@ -1131,7 +1135,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "organization",
     ],
     properties: {
-      organization: { type: "object", allOf: [{ ref: "Organization" }] },
+      organization: { ref: "Organization" },
       public_user_data: { ref: "OrganizationMembershipPublicUserData" },
     },
   },
@@ -1298,9 +1302,9 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     nullableRequired: ["description"],
     properties: {
       roles: { type: "array", items: { ref: "RoleSetItem" } },
-      default_role: { nullable: true, allOf: [{ ref: "RoleSetItem" }] },
-      creator_role: { nullable: true, allOf: [{ ref: "RoleSetItem" }] },
-      role_set_migration: { nullable: true, allOf: [{ ref: "RoleSetMigration" }] },
+      default_role: { ref: "RoleSetItem", nullable: true },
+      creator_role: { ref: "RoleSetItem", nullable: true },
+      role_set_migration: { ref: "RoleSetMigration", nullable: true },
     },
   },
   RoleSetItem: {
@@ -1356,7 +1360,6 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "created_at",
       "updated_at",
     ],
-    anyOf: [{ required: ["domain"] }, { required: ["domains"] }],
   },
   SAMLAccountVerification: {
     type: "object",
@@ -1411,7 +1414,6 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       attribute_mapping: { ref: "SAMLConnectionAttributeMapping" },
       login_hint: { ref: "SAMLConnectionLoginHint" },
     },
-    anyOf: [{ required: ["domain"] }, { required: ["domains"] }],
   },
   SAMLConnectionAttributeMapping: {
     type: "object",
@@ -1439,6 +1441,11 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "updated_at",
     ],
   },
+  SCIMDirectoryList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { ref: "SCIMDirectories" } },
+  },
   SCIMGroupRoleMapping: {
     type: "object",
     required: [
@@ -1455,6 +1462,12 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "updated_at",
     ],
     properties: { role: { ref: "Role" } },
+  },
+  SCIMGroupRoleMappingDeleted: { type: "object", required: ["object", "id", "deleted"] },
+  SCIMGroupRoleMappingList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { ref: "SCIMGroupRoleMappings" } },
   },
   SCIMGroupRoleMappings: { type: "array", items: { ref: "SCIMGroupRoleMapping" } },
   SCIMUserMetadata: {
@@ -1589,6 +1602,11 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "updated_at",
     ],
   },
+  TrustedDeviceList: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { type: "array", items: { ref: "TrustedDevice" } } },
+  },
   User: {
     type: "object",
     required: [
@@ -1654,8 +1672,8 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       enterprise_accounts: { type: "array", items: { ref: "EnterpriseAccount" } },
       organization_memberships: { type: "array", items: { ref: "OrganizationMembership" } },
       directories: { type: "array", items: { ref: "SCIMUserMetadata" } },
-      directory: { allOf: [{ ref: "SCIMUserMetadata" }] },
-      scim: { nullable: true, allOf: [{ ref: "SCIMUserMetadata" }] },
+      directory: { ref: "SCIMUserMetadata" },
+      scim: { ref: "SCIMUserMetadata", nullable: true },
     },
   },
   VerificationAdmin: {
@@ -1736,10 +1754,44 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     nullableRequired: ["attempts", "expire_at"],
     properties: { object: { type: "string", enum: ["verification_web3"] } },
   },
+  VerifyOAuthAccessTokenResponse: {
+    anyOf: [
+      {
+        type: "object",
+        required: [
+          "object",
+          "id",
+          "client_id",
+          "subject",
+          "scopes",
+          "revoked",
+          "revocation_reason",
+          "expired",
+          "expiration",
+          "created_at",
+          "updated_at",
+        ],
+        nullableRequired: ["revocation_reason", "expiration"],
+        properties: {
+          act: {
+            type: "object",
+            required: ["sub"],
+            properties: { act: { type: "object", required: ["sub"] } },
+          },
+        },
+      },
+      { type: "object", required: ["active"] },
+    ],
+  },
+  WaitlistEntries: {
+    type: "object",
+    required: ["data", "total_count"],
+    properties: { data: { type: "array", items: { ref: "WaitlistEntry" } } },
+  },
   WaitlistEntry: {
     type: "object",
     required: ["object", "id", "email_address", "status", "created_at", "updated_at"],
-    properties: { invitation: { type: "object", nullable: true, allOf: [{ ref: "Invitation" }] } },
+    properties: { invitation: { ref: "Invitation", nullable: true } },
   },
   Web3Wallet: {
     type: "object",

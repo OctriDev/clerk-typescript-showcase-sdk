@@ -89,6 +89,20 @@ export interface SCIMDirectory {
 }
 
 /**
+ * Typed representation of the `SCIMDirectoryList` API schema.
+ */
+export interface SCIMDirectoryList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: SCIMDirectories;
+  /**
+   * Total number of directories.
+   */
+  totalCount: number;
+}
+
+/**
  * A mapping from a SCIM group to an organization role. Members of the group are assigned the role; the lowest-precedence match wins when a user belongs to multiple mapped groups.
  */
 export interface SCIMGroupRoleMapping {
@@ -140,6 +154,38 @@ export interface SCIMGroupRoleMapping {
    * Unix timestamp (milliseconds) of when the mapping was last updated.
    */
   updatedAt: number;
+}
+
+/**
+ * Typed representation of the `SCIMGroupRoleMappingDeleted` API schema.
+ */
+export interface SCIMGroupRoleMappingDeleted {
+  /**
+   * String representing the object's type.
+   */
+  object: "scim_group_role_mapping" | (string & {});
+  /**
+   * The ID of the deleted SCIM group role mapping.
+   */
+  id: string;
+  /**
+   * Whether the SCIM group role mapping was successfully deleted.
+   */
+  deleted: boolean;
+}
+
+/**
+ * Typed representation of the `SCIMGroupRoleMappingList` API schema.
+ */
+export interface SCIMGroupRoleMappingList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: SCIMGroupRoleMappings;
+  /**
+   * Total number of SCIM group role mappings in the directory.
+   */
+  totalCount: number;
 }
 
 export type SCIMGroupRoleMappings = SCIMGroupRoleMapping[];

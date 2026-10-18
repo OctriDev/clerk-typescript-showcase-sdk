@@ -218,11 +218,11 @@ export interface CommerceTotalsResponse {
    */
   perUnitTotals?: CommercePerUnitTotal[];
   /**
-   * Optional API value serialized in the `credits` wire field.
+   * Optional object value serialized in the `credits` wire field.
    */
   credits?: CommerceCreditsResponse | null;
   /**
-   * Optional API value serialized in the `discounts` wire field.
+   * Optional object value serialized in the `discounts` wire field.
    */
   discounts?: CommerceDiscountsResponse | null;
 }
@@ -252,7 +252,7 @@ export interface CommerceTotalsResponse2 {
    */
   perUnitTotals?: CommercePerUnitTotal2[];
   /**
-   * Optional API value serialized in the `credits` wire field.
+   * Optional object value serialized in the `credits` wire field.
    */
   credits?: CommerceCreditsResponse | null;
   /**

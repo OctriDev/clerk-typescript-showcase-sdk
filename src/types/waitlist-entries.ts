@@ -4,6 +4,20 @@
 import type { Invitation } from "./shared";
 
 /**
+ * Typed representation of the `WaitlistEntries` API schema.
+ */
+export interface WaitlistEntries {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: WaitlistEntry[];
+  /**
+   * Total number of waitlist entries
+   */
+  totalCount: number;
+}
+
+/**
  * Typed representation of the `WaitlistEntry` API schema.
  */
 export interface WaitlistEntry {

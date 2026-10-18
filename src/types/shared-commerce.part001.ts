@@ -65,11 +65,11 @@ export interface CommerceCreditLedgerResponse {
  */
 export interface CommerceCreditsResponse {
   /**
-   * Required API value serialized in the `proration` wire field.
+   * Required object value serialized in the `proration` wire field.
    */
   proration: CommerceProrationCreditDetailResponse | null;
   /**
-   * Required API value serialized in the `payer` wire field.
+   * Required object value serialized in the `payer` wire field.
    */
   payer: CommercePayerCreditResponse | null;
   /**
@@ -83,7 +83,7 @@ export interface CommerceCreditsResponse {
  */
 export interface CommerceDiscountsResponse {
   /**
-   * Required API value serialized in the `proration` wire field.
+   * Required object value serialized in the `proration` wire field.
    */
   proration: CommerceProrationDiscountResponse | null;
   /**
@@ -349,15 +349,15 @@ export interface CommercePlan {
    */
   name: string;
   /**
-   * Required API value serialized in the `fee` wire field.
+   * Required object value serialized in the `fee` wire field.
    */
   fee: CommerceMoneyResponse | null;
   /**
-   * Required API value serialized in the `annual_monthly_fee` wire field.
+   * Required object value serialized in the `annual_monthly_fee` wire field.
    */
   annualMonthlyFee: CommerceMoneyResponse | null;
   /**
-   * Required API value serialized in the `annual_fee` wire field.
+   * Required object value serialized in the `annual_fee` wire field.
    */
   annualFee: CommerceMoneyResponse | null;
   /**

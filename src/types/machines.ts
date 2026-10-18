@@ -8,6 +8,45 @@ export type Machine = MachineWithoutScopedMachines & {
   scopedMachines: MachineWithoutScopedMachines[];
 };
 
+export type MachineCreated = Machine & {
+  /**
+   * The secret key for the machine, only returned upon creation.
+   */
+  secretKey: string;
+};
+
+/**
+ * Typed representation of the `MachineDeleted` API schema.
+ */
+export interface MachineDeleted {
+  /**
+   * String representing the object's type.
+   */
+  object: "machine" | (string & {});
+  /**
+   * The ID of the deleted machine
+   */
+  id: string;
+  /**
+   * Whether the machine was successfully deleted
+   */
+  deleted: boolean;
+}
+
+/**
+ * Typed representation of the `MachineList` API schema.
+ */
+export interface MachineList {
+  /**
+   * Required array value serialized in the `data` wire field.
+   */
+  data: Machine[];
+  /**
+   * Total number of machines
+   */
+  totalCount: number;
+}
+
 /**
  * Typed representation of the `MachineScope` API schema.
  */
@@ -28,6 +67,42 @@ export interface MachineScope {
    * Unix timestamp of creation.
    */
   createdAt: number;
+}
+
+/**
+ * Typed representation of the `MachineScopeDeleted` API schema.
+ */
+export interface MachineScopeDeleted {
+  /**
+   * String representing the object's type.
+   */
+  object: "machine_scope" | (string & {});
+  /**
+   * The ID of the machine that had access to the target machine
+   */
+  fromMachineId: string;
+  /**
+   * The ID of the machine that was being accessed
+   */
+  toMachineId: string;
+  /**
+   * Whether the machine scope was successfully deleted
+   */
+  deleted: boolean;
+}
+
+/**
+ * Typed representation of the `MachineSecretKey` API schema.
+ */
+export interface MachineSecretKey {
+  /**
+   * String representing the object's type.
+   */
+  object: "machine_secret_key" | (string & {});
+  /**
+   * The secret key for the machine.
+   */
+  secret: string;
 }
 
 /**

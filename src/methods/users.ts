@@ -4,7 +4,6 @@
 export * from "./users/part1";
 export * from "./users/part2";
 export * from "./users/part3";
-export * from "./users/part4";
 import type { ClientConfig, RequestOptions } from "../client";
 
 import type {
@@ -62,6 +61,7 @@ import type {
   RevokeUserBiometricCredentialParams,
   RevokeUserTrustedDeviceParams,
   SetUserPasswordCompromisedParams,
+  UnsetUserPasswordCompromisedParams,
   UsersGetOrganizationInvitationsParams,
   UsersGetOrganizationMembershipsParams,
   VerifyPasswordParams,
@@ -81,13 +81,12 @@ import {
   revokeUserBiometricCredential,
   revokeUserTrustedDevice,
   setUserPasswordCompromised,
+  unsetUserPasswordCompromised,
   usersGetOrganizationInvitations,
   usersGetOrganizationMemberships,
   verifyPassword,
   verifyTotp,
 } from "./users/part3";
-import type { UnsetUserPasswordCompromisedParams } from "./users/part4";
-import { unsetUserPasswordCompromised } from "./users/part4";
 
 export class UsersNamespace {
   constructor(private readonly _config: ClientConfig) {}
