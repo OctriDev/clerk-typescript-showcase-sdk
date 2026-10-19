@@ -752,7 +752,7 @@
       "kind": "json",
       "value": {
         "verification_id": "verification-1",
-        "code": "code"
+        "code": "user@example.com"
       }
     },
     "response": {
@@ -6616,7 +6616,7 @@
           "object": "allowlist_identifier",
           "id": "id-1",
           "invitation_id": "invitation-1",
-          "identifier": "identifier",
+          "identifier": "user@example.com",
           "identifier_type": "email_address",
           "instance_id": "instance-1",
           "created_at": 1,
@@ -6660,7 +6660,7 @@
           {
             "object": "blocklist_identifier",
             "id": "id-1",
-            "identifier": "identifier",
+            "identifier": "user@example.com",
             "identifier_type": "email_address",
             "instance_id": "instance-1",
             "created_at": 1,
