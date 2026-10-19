@@ -11856,7 +11856,7 @@
         "example": {
           "on_behalf_of": {
             "user_id": "user-1",
-            "identifier": "identifier"
+            "identifier": "user@example.com"
           },
           "permissions": "*",
           "agent_name": "Example Name",
@@ -13272,7 +13272,7 @@
         ],
         "example": {
           "verification_id": "verification-1",
-          "code": "code"
+          "code": "user@example.com"
         },
         "expectsArray": false
       }
@@ -34042,7 +34042,7 @@
             "object": "allowlist_identifier",
             "id": "id-1",
             "invitation_id": "invitation-1",
-            "identifier": "identifier",
+            "identifier": "user@example.com",
             "identifier_type": "email_address",
             "instance_id": "instance-1",
             "created_at": 1,
@@ -34155,7 +34155,7 @@
           }
         ],
         "example": {
-          "identifier": "identifier",
+          "identifier": "user@example.com",
           "notify": false
         },
         "expectsArray": false
@@ -34170,7 +34170,7 @@
           "object": "allowlist_identifier",
           "id": "id-1",
           "invitation_id": "invitation-1",
-          "identifier": "identifier",
+          "identifier": "user@example.com",
           "identifier_type": "email_address",
           "instance_id": "instance-1",
           "created_at": 1,
@@ -34294,7 +34294,7 @@
             {
               "object": "blocklist_identifier",
               "id": "id-1",
-              "identifier": "identifier",
+              "identifier": "user@example.com",
               "identifier_type": "email_address",
               "instance_id": "instance-1",
               "created_at": 1,
@@ -34403,7 +34403,7 @@
           }
         ],
         "example": {
-          "identifier": "identifier"
+          "identifier": "user@example.com"
         },
         "expectsArray": false
       }
@@ -34416,7 +34416,7 @@
         "example": {
           "object": "blocklist_identifier",
           "id": "id-1",
-          "identifier": "identifier",
+          "identifier": "user@example.com",
           "identifier_type": "email_address",
           "instance_id": "instance-1",
           "created_at": 1,

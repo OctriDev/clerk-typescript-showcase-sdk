@@ -711,7 +711,7 @@
         "headers": {},
         "body": {
           "verification_id": "verification-1",
-          "code": "code"
+          "code": "user@example.com"
         },
         "bodyKind": "json",
         "contentType": "application/json",
@@ -729,7 +729,7 @@
         "headers": {
           "content-type": "application/json"
         },
-        "bodyText": "{\"verification_id\":\"verification-1\",\"code\":\"code\"}",
+        "bodyText": "{\"verification_id\":\"verification-1\",\"code\":\"user@example.com\"}",
         "multipartFields": null
       },
       "response": {
@@ -6210,13 +6210,13 @@
         "kind": "json",
         "status": 200,
         "mediaType": "application/json",
-        "body": "[{\"object\":\"allowlist_identifier\",\"id\":\"id-1\",\"invitation_id\":\"invitation-1\",\"identifier\":\"identifier\",\"identifier_type\":\"email_address\",\"instance_id\":\"instance-1\",\"created_at\":1,\"updated_at\":1}]",
+        "body": "[{\"object\":\"allowlist_identifier\",\"id\":\"id-1\",\"invitation_id\":\"invitation-1\",\"identifier\":\"user@example.com\",\"identifier_type\":\"email_address\",\"instance_id\":\"instance-1\",\"created_at\":1,\"updated_at\":1}]",
         "value": [
           {
             "object": "allowlist_identifier",
             "id": "id-1",
             "invitation_id": "invitation-1",
-            "identifier": "identifier",
+            "identifier": "user@example.com",
             "identifier_type": "email_address",
             "instance_id": "instance-1",
             "created_at": 1,
@@ -6256,13 +6256,13 @@
         "kind": "json",
         "status": 200,
         "mediaType": "application/json",
-        "body": "{\"data\":[{\"object\":\"blocklist_identifier\",\"id\":\"id-1\",\"identifier\":\"identifier\",\"identifier_type\":\"email_address\",\"instance_id\":\"instance-1\",\"created_at\":1,\"updated_at\":1}],\"total_count\":100}",
+        "body": "{\"data\":[{\"object\":\"blocklist_identifier\",\"id\":\"id-1\",\"identifier\":\"user@example.com\",\"identifier_type\":\"email_address\",\"instance_id\":\"instance-1\",\"created_at\":1,\"updated_at\":1}],\"total_count\":100}",
         "value": {
           "data": [
             {
               "object": "blocklist_identifier",
               "id": "id-1",
-              "identifier": "identifier",
+              "identifier": "user@example.com",
               "identifier_type": "email_address",
               "instance_id": "instance-1",
               "created_at": 1,
