@@ -5801,7 +5801,7 @@
   },
   {
     "id": "behavior-41",
-    "operationId": "deleteUsersPasskey",
+    "operationId": "deleteUserPasskey",
     "method": "DELETE",
     "path": "/users/{user_id}/passkeys/{passkey_identification_id}",
     "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"DELETE\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearerAuth\":[]}],\"streaming\":false}",

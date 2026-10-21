@@ -31964,7 +31964,7 @@
     }
   },
   {
-    "operationId": "deleteUsersPasskey",
+    "operationId": "deleteUserPasskey",
     "summary": "Delete the passkey identification for a given user. The user is notified through email or SMS unless the passkey registration was never completed.",
     "method": "DELETE",
     "pathTemplate": "/users/{user_id}/passkeys/{passkey_identification_id}",

@@ -17057,91 +17057,8 @@
       ]
     },
     {
-      "id": "deleteUserProfileImage",
-      "wireOperationId": "DeleteUserProfileImage",
-      "method": "delete",
-      "path": "/users/{user_id}/profile_image",
-      "namespace": ["users"],
-      "streams": false,
-      "mode": "normal",
-      "streamSelector": null,
-      "requestMediaType": null,
-      "contentTypes": null,
-      "publicMethods": [
-        {
-          "mode": "normal",
-          "name": "DeleteUserProfileImage"
-        }
-      ],
-      "requestModes": [],
-      "responseModes": [
-        {
-          "statusCode": "200",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/User",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "User",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        }
-      ],
-      "errorResponseModes": [
-        {
-          "statusCode": "404",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/ClerkErrors",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "ClerkErrors",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        }
-      ],
-      "params": [
-        {
-          "name": "user_id",
-          "in": "path",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "simple",
-          "explode": false
-        }
-      ],
-      "bindings": [
-        {
-          "name": "user_id",
-          "in": "path",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "simple",
-          "explode": false
-        }
-      ]
-    },
-    {
-      "id": "deleteUsersPasskey",
-      "wireOperationId": "deleteUsersPasskey",
+      "id": "deleteUserPasskey",
+      "wireOperationId": "deleteUserPasskey",
       "method": "delete",
       "path": "/users/{user_id}/passkeys/{passkey_identification_id}",
       "namespace": ["users"],
@@ -17153,7 +17070,7 @@
       "publicMethods": [
         {
           "mode": "normal",
-          "name": "deleteUsersPasskey"
+          "name": "deleteUserPasskey"
         }
       ],
       "requestModes": [],
@@ -17267,6 +17184,89 @@
         },
         {
           "name": "passkey_identification_id",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "deleteUserProfileImage",
+      "wireOperationId": "DeleteUserProfileImage",
+      "method": "delete",
+      "path": "/users/{user_id}/profile_image",
+      "namespace": ["users"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "contentTypes": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "DeleteUserProfileImage"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/User",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "User",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ClerkErrors",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ClerkErrors",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "user_id",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "user_id",
           "in": "path",
           "required": true,
           "nullable": false,
@@ -70493,24 +70493,7 @@
         ]
       },
       {
-        "id": "DeleteUserProfileImage",
-        "method": "delete",
-        "path": "/users/{user_id}/profile_image",
-        "summary": "Deletes the profile image associated with a user account. Use `user_id` to identify the account whose image you want to remove. A 200 response returns the updated user object.",
-        "description": "Delete a user's profile image",
-        "deprecated": false,
-        "deprecationMessage": null,
-        "parameters": [
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "description": "The ID of the user to delete the profile image for"
-          }
-        ]
-      },
-      {
-        "id": "deleteUsersPasskey",
+        "id": "deleteUserPasskey",
         "method": "delete",
         "path": "/users/{user_id}/passkeys/{passkey_identification_id}",
         "summary": "Delete the passkey identification for a given user. The user is notified through email or SMS unless the passkey registration was never completed.",
@@ -70529,6 +70512,23 @@
             "in": "path",
             "required": true,
             "description": "The ID of the passkey identity to be deleted"
+          }
+        ]
+      },
+      {
+        "id": "DeleteUserProfileImage",
+        "method": "delete",
+        "path": "/users/{user_id}/profile_image",
+        "summary": "Deletes the profile image associated with a user account. Use `user_id` to identify the account whose image you want to remove. A 200 response returns the updated user object.",
+        "description": "Delete a user's profile image",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "description": "The ID of the user to delete the profile image for"
           }
         ]
       },

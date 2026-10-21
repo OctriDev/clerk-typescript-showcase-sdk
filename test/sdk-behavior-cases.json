@@ -5445,7 +5445,7 @@
     },
     {
       "id": "behavior-41",
-      "operationId": "deleteUsersPasskey",
+      "operationId": "deleteUserPasskey",
       "kinds": ["auth-application", "error-response", "json-response", "path-serialization"],
       "request": {
         "method": "DELETE",

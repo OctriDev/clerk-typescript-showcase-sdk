@@ -138,7 +138,7 @@ const OPERATION_SECURITY: Readonly<Record<string, readonly (readonly string[])[]
 
   deleteBackupCode: [["bearerAuth"]],
 
-  deleteUsersPasskey: [["bearerAuth"]],
+  deleteUserPasskey: [["bearerAuth"]],
 
   listUserTrustedDevices: [["bearerAuth"]],
 
